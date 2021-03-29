@@ -60,3 +60,6 @@ Route::get('/pilote', function () {
 Route::get('/comptes_pilotes', function () {
     return view('comptes_pilotes');
 })->name("comptes_pilotes");
+
+Route::get('users', 'UsersController@create');
+Route::post('users', 'UsersController@store');

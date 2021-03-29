@@ -47,10 +47,12 @@
 
 						<!---------Formulaire de l'entreprise----------------------------------------------------------------------->
 						<div class="input-group mb-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text">Nom</span>
-							</div>
-							<input type="text" class="form-control" placeholder="Nom de l'entreprise" aria-label="Nom" aria-describedby="basic-addon1">
+							<form action="" method="POST">
+								<div class="input-group-prepend form-group">
+									<span class="input-group-text">Nom</span>
+									<input type="text" class="form-control" placeholder="Nom de l'entreprise" aria-label="Nom" aria-describedby="basic-addon1" name="nom_entreprise">
+								</div>
+							</form>
 						</div>
 
 						<div class="input-group mb-3">
