@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Entreprise;
+use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    $promotion = Promotion::create([
+    'Nom' => 'BAC']);
+    return view('home');
 })->name("home");
 
 Route::get('/legal', function () {
