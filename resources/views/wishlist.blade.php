@@ -11,7 +11,7 @@
 		<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
 			<!----->
-			<a class="navbar-brand" href="candidature 1.html">
+			<a class="navbar-brand" href="{{route('home')}}">
 				<img src="{{ asset('logo.png') }}" width="50" height="50" class="logo" alt="">
 				<p class="titre" alt="">Annuaire d'entreprises</p>
 			</a>

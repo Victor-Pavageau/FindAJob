@@ -12,7 +12,7 @@
 	<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
 			<!----->
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{{route('home')}}">
 				<img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 				<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 			</a>
@@ -37,7 +37,7 @@
 						<!-------------------------------Entreprise-------------------------->
 						<div class="card-header">Entreprise</div>
 						<div class="card-body">
-							<h5 class="card-title border rounded"><a class= "text-white" href="C:/Users/ROUVIN/Desktop/prog/WEB/projet/www/entreprise.html?">Gerer les entreprises.</a></h5>
+							<h5 class="card-title border rounded"><a class= "text-white" href="{{route('entreprise')}}">Gerer les entreprises.</a></h5>
 							<p class="card-text">Rechercher, Créer, Modifier Evaluer et consulter les statistiques de l'entreprise.</p>
 						</div>
 						<div class="card-footer">
@@ -48,7 +48,7 @@
 					<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
 						<div class="card-header">Stage</div>
 						<div class="card-body">
-							<h5 class="card-title border rounded"><a class= "text-white" href="#">Gerer les stages.</a></h5>
+							<h5 class="card-title border rounded"><a class= "text-white" href="{{route('offre_de_stage')}}">Gerer les stages.</a></h5>
 							<p class="card-text">Rechercher une offre, Créer, Modifier, Supprimer et Consulter les statistiques des offres.</p>
 						</div>
 						<div class="card-footer">
@@ -59,7 +59,7 @@
 					<div class="card text-white bg-info mb-3" style="max-width: 18rem;">
 						<div class="card-header">Candidature</div>
 						<div class="card-body">
-							<h5 class="card-title border rounded"><a class= "text-white" href="#">Examiner ses candidatures.</a></h5>
+							<h5 class="card-title border rounded"><a class= "text-white" href="{{route('mescandidatures')}}">Examiner ses candidatures.</a></h5>
 							<p class="card-text">Ajouter/Retirer une offre de la wish-list et postuler à une nouvelle offre.</p>
 						</div>
 						<div class="card-footer">
@@ -89,11 +89,7 @@
 				<h5>Ce site web  regroupe différentes offres de stage et permet de stocker les données des entreprises ayant déjà pris un stagiaire, ou qui en recherchent un. 
 				</h5>
 			</div>
-			<div class="d-flex justify-content-center mt-5">
-				carousel ?
-			</div>
 		</aside>
 		@include('Partials/LegalPartial')
 	</body>
-	<script src=".\assets\darkmode\darkMode.js"></script>
 </html>

@@ -14,7 +14,7 @@
 <header>
 	<nav class="navbar navbar-light" style="background-color: #fff;">
 		<!----->
-		<a class="navbar-brand" href="#">
+		<a class="navbar-brand" href="{{route('home')}}">
 			<img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 			<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 		</a>

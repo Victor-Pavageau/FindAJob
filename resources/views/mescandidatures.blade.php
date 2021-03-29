@@ -12,7 +12,7 @@
 	<body>
 		<header>
 			<nav class="navbar navbar-light" style="background-color: #fff;">
-				<a class="navbar-brand" href="candidature 2.html">
+				<a class="navbar-brand" href="{{route('home')}}">
 					<img src="{{ asset('logo.png') }}" width="50" height="50" class="logo" alt="">
 					<p class="titre" alt="">Annuaire d'entreprises</p>
 				</a>
@@ -92,6 +92,7 @@
 						<button type="submit" class="btn red">STEP 6</button>
 					</div>
 				</form>
+				<button type="button" class="btn red" onclick="history.go(-1)"> Retour</button>
 				</div>
 			</aside>
 		</main>
