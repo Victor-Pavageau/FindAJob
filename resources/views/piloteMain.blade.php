@@ -3,17 +3,17 @@
 <!---------HEAD----------------------------------------------------------------------->
 <head>
 	<meta charset="utf-8">
-	<title>Acceuil Pilotes</title>
-	<link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
-	<link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href=".\assets\darkmode\darkmode.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+	<title>Acceuil Pilotes</title>
 </head>
 <header>
 	<nav class="navbar navbar-light" style="background-color: #fff;">
 		<!----->
 		<a class="navbar-brand" href="#">
-			 <img src="./assets/logo.png" width="50" height="50" class="d-inline-block align-middle" alt="">
+			 <img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 			<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 		</a>
 		<button type="button" class="float-right btn btn-outline-primary btn-sm" onclick="myFunction()"> <i class="fas fa-adjust"></i> Thème </button>

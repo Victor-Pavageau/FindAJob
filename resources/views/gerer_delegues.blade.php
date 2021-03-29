@@ -2,18 +2,18 @@
 <html lang="fr">
 
 	<head>
-		<title>Gestion des Délégués</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
-		<link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" href="./assets/darkmode/darkmode.css">
+		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+		<title>Gestion des Délégués</title>
 	</head>
 	
 	<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
 			<a class="navbar-brand" href="#">
-				<img src="./assets/logo.png" width="50" height="50" class="d-inline-block align-middle" alt="">
+				<img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 				<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 			</a>
 			<form class="form-inline">
