@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<title>Authentification</title>
 	<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-	<link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href=".\assets\background_authentification\background.css">
+	<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/authentification.css') }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
@@ -109,7 +109,7 @@
 <span id="temp"></span>
 <!-- Background image -->
 		
-		<script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
-		<script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src=".\assets\javascript\codePostale.js"></script>
+		<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+		<script src="{{ asset('css/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
 </body>
