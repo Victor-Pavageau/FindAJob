@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 		<title>Gestion des Délégués</title>
 	</head>
@@ -29,42 +30,42 @@
 				<div class="col">
 					<br>
 					<div>
-						<button class="btn btn-outline-primary" onclick="">Ajouter</button>
-						<button class="btn btn-outline-success" onclick="">Modifier</button>
-						<button class="btn btn-outline-warning" onclick="">Supprimer</button>
+						<button type="button" class="btn blue" onclick="">Ajouter</button>
+						<button type="button" class="btn green" onclick="">Modifier</button>
+						<button type="button" class="btn yellow" onclick="">Supprimer</button>
 					</div>
 					<br>
 						
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Nom</span>
+							<span class="input-group-text">Nom</span>
 							<input type="text" class="form-control" placeholder="Nom du délégué">
 						</div>
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Prénom</span>
+							<span class="input-group-text">Prénom</span>
 							<input type="text" class="form-control" placeholder="Prénom du délégué">
 						</div>
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Centre</span>
+							<span class="input-group-text">Centre</span>
 							<input type="text" class="form-control" placeholder="Centre du délégué">
 						</div>
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Promotion assignée</span>
+							<span class="input-group-text">Promotion assignée</span>
 							<input type="text" class="form-control" placeholder="Promotion du délégué">
 						</div>
 					</div>
 					
 					<div>
-						<button class="btn btn-outline-danger btn-block" onclick="">Rechercher le compte délégué</button>
+						<button type="button" class="btn red" onclick="">Rechercher le compte délégué</button>
 					</div>
 					<br>
 				</div>
@@ -79,7 +80,7 @@
 			
 			<br>
 			<div class="d-flex justify-content-center">
-				<a href="./droits-delegues.html"> <button class="btn btn-outline-info">Modifier les droits du délégué</button></a>
+				<a href="./droits-delegues.html"> <button type="button" class="btn purle">Modifier les droits du délégué</button></a>
 			</div>
 			<br>
 			
