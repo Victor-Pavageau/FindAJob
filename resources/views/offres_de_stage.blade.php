@@ -39,13 +39,13 @@
 
 				<div class="row">
 					<div class="col">
-						<button id="buttonTropAgreable" type="button" class="btn blue" onclick="ajouterOffre()">Ajouter une offre</button>
+						<button type="button" class="btn blue" onclick="ajouterOffre()">Ajouter une offre</button>
 					</div>
 					<div class="col">
-						<button id="buttonTropAgreable" type="button" class="btn green" onclick="modifierOffre()">Modifier l'offre</button>
+						<button type="button" class="btn green" onclick="modifierOffre()">Modifier l'offre</button>
 					</div>
 					<div class="col">
-						<button id="buttonTropAgreable" type="button" class="btn yellow" onclick="supprimerOffre()">Supprimer l'offre</button>
+						<button type="button" class="btn yellow" onclick="supprimerOffre()">Supprimer l'offre</button>
 					</div>
 					<div class="row">
 						<div class="col-6">
@@ -53,42 +53,42 @@
 							<!---------Formulaire de l'entreprise----------------------------------------------------------------------->
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Compétences</span>
+									<span class="input-group-text" >Compétences</span>
 								</div>
 								<input type="text" class="form-control" placeholder="Compétences recherchées" aria-label="Nom" aria-describedby="basic-addon1">
 							</div>
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Entreprise</span>
+									<span class="input-group-text">Entreprise</span>
 								</div>
 								<input type="text" class="form-control" placeholder="Nom de l'entreprise" aria-label="Nom" aria-describedby="basic-addon1">
 							</div>
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Localité</span>
+									<span class="input-group-text">Localité</span>
 								</div>
 								<input type="text" class="form-control" placeholder="Adresse de l'entreprise" aria-label="Nom" aria-describedby="basic-addon1">
 							</div>
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Promotions concernées</span>
+									<span class="input-group-text">Promotions concernées</span>
 								</div>
 								<input type="text" class="form-control" placeholder="ex : A3" aria-label="Nom" aria-describedby="basic-addon1">
 							</div>
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Durée du stage</span>
+									<span class="input-group-text">Durée du stage</span>
 								</div>
 								<input type="text" class="form-control" placeholder="ex : 6 mois" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
 							</div>
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Base de rémunération</span>
+									<span class="input-group-text">Base de rémunération</span>
 								</div>
 								<input type="text" class="form-control" placeholder="ex : 2000€" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
 							</div>
@@ -97,19 +97,19 @@
 						<div class="col-6 ">
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Date de l'offre</span>
+									<span class="input-group-text">Date de l'offre</span>
 								</div>
 								<input type="Date" class="form-control" placeholder="Numéro de téléphone" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
 							</div>
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1">Nombre de places</span>
+									<span class="input-group-text">Nombre de places</span>
 								</div>
 								<input type="text" class="form-control" placeholder="ex : 4" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
 							</div>
 							<div>
-								<button id="buttonTropAgreable" type="button" class="btn red" onclick="rechecherOffre()">Rechercher l'offre</button></div>
+								<button type="button" class="btn red" onclick="rechecherOffre()">Rechercher l'offre</button></div>
 
 							</div>
 						</div>

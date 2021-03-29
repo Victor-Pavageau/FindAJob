@@ -28,7 +28,7 @@
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Nom</span>
+							<span class="input-group-text">Nom</span>
 						</div>
 						<input type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
 					</div>
@@ -36,31 +36,32 @@
 					<div class="input-group mb-3">
 						<input type="text" class="form-control" placeholder="Prénom" aria-label="Prénom" aria-describedby="basic-addon2">
 						<div class="input-group-append">
-							<span class="input-group-text" id="basic-addon2">Prénom</span>
+							<span class="input-group-text">Prénom</span>
 						</div>
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">@</span>
+							<span class="input-group-text">@</span>
 						</div>
 						<input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Date de naissance</span>
+							<span class="input-group-text">Date de naissance</span>
 						</div>
 						<input type="Date" class="form-control"  aria-describedby="basic-addon1">
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<label class="input-group-text" for="inputGroupSelect01">Sex</label>
+							<label class="input-group-text">Sex</label>
 						</div>
-						<select class="custom-select" id="inputGroupSelect01">
+						<select class="custom-select">
 							<option value="1">Homme</option>
 							<option value="2">Femme</option>
+							<option value="3">Autre</option>
 						</select>
 					</div>
 
@@ -69,14 +70,14 @@
 					<div id="Adresse">
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1">Centre</span>
+								<span class="input-group-text">Centre</span>
 							</div>
 							<input id="inputNomVille" class="form-control autocomplete ui-autocomplete-input" type="search" placeholder="Centre" aria-label="Ville" autocomplete="off">
 						</div>
 					<!-------------------Promotion-------------------------------------------->
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1">Promotion assignée</span>
+								<span class="input-group-text">Promotion assignée</span>
 							</div>
 							<input  id="promotion" type="text" class="form-control" placeholder="ex : A3" aria-label="promotion" aria-describedby="basic-addon1">
 						</div>
@@ -85,14 +86,14 @@
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Mot de passe</span>
+							<span class="input-group-text">Mot de passe</span>
 						</div>
 						<input type="password" class="form-control" placeholder="Mot de passe" aria-label="Mot de passe" aria-describedby="basic-addon1">
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Confirmer le mot de passe</span>
+							<span class="input-group-text">Confirmer le mot de passe</span>
 						</div>
 						<input type="password" class="form-control" placeholder="Confirmer le mot de passe" aria-label="Mot de passe" aria-describedby="basic-addon1">
 					</div>
@@ -105,9 +106,6 @@
 	</div>
 	<!-- Background image -->
 
-
-		
-	<span id="temp"></span>
 	<!-- Background image -->
 			
 		<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
