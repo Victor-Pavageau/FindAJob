@@ -1,11 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+
 body {
+    display : table;
+    width: 100%;
     background-color: #2B2C30;
     color: white;
     font-family: 'Oswald', sans-serif;
     scroll-behavior: smooth;
 }
 
-.light-mode {
-    background-color: white;
-    color: #2B2C30;
+footer {
+    display : table-row;
+    height: 100px;
 }

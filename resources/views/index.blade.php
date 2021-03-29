@@ -4,9 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+		@include('Partials/HeadPartial')
 		<title>Acceuil Etudiants</title>
 	</head>
 	<!---------HEADER----------------------------------------------------------------------->
@@ -95,7 +93,7 @@
 				carousel ?
 			</div>
 		</aside>
-		@include('LegalPartial')
+		@include('Partials/LegalPartial')
 	</body>
 	<script src=".\assets\darkmode\darkMode.js"></script>
 </html>

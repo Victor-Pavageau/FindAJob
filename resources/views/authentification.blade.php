@@ -4,10 +4,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+		@include('Partials/HeadPartial')
 		<link rel="stylesheet" href="{{ asset('css/authentification.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 		<title>Authentification</title>
 	</head>
 	<body>
@@ -112,6 +110,6 @@
 			
 		<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
 		<script src="{{ asset('css/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-		@include('LegalPartial')
+		@include('Partials/LegalPartial')
 	</body>
 </html>

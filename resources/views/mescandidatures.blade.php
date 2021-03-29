@@ -4,11 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+		@include('Partials/HeadPartial')
 		<link rel="stylesheet" href="{{ asset('css/mescandidatures.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 		<title>Candidature</title>
 	</head>
 	<body>
@@ -97,6 +95,6 @@
 				</div>
 			</aside>
 		</main>
-		@include('LegalPartial')
+		@include('Partials/LegalPartial')
 	</body>
 </html>
