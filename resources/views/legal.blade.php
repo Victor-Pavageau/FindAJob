@@ -5,9 +5,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+		@include('Partials/HeadPartial')
 		<title>Acceuil Etudiants</title>
 	</head>
 
@@ -151,5 +149,7 @@
 		<p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou
 			non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6
 			janvier 1978).</p>
+
+		<button type="button" class="btn red" onclick="history.go(-1)"> Retour</button>
 	</body>
 </html>

@@ -4,16 +4,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+		@include('Partials/HeadPartial')
 		<title>Gestion des Délégués</title>
 	</head>
 	
 	<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{{route('home')}}">
 				<img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 				<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 			</a>
@@ -80,7 +77,7 @@
 				</div>
 			</div>
 		</p>
-		@include('LegalPartial')
+		@include('Partials/LegalPartial')
 	</body>
 	<script src="{{ asset('js/droits_delegues') }}"></script>
 </html>

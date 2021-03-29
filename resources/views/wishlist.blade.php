@@ -3,17 +3,15 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+		@include('Partials/HeadPartial')
 		<link rel="stylesheet" href="{{ asset('css/wishlist.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 		<title>Candidatures</title>
 	</head>
 	<body>
 		<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
 			<!----->
-			<a class="navbar-brand" href="candidature 1.html">
+			<a class="navbar-brand" href="{{route('home')}}">
 				<img src="{{ asset('logo.png') }}" width="50" height="50" class="logo" alt="">
 				<p class="titre" alt="">Annuaire d'entreprises</p>
 			</a>
@@ -66,6 +64,6 @@
 				</div>	
 			</div>
 		</main>
-		@include('LegalPartial')
+		@include('Partials/LegalPartial')
 	</body>
 </html>

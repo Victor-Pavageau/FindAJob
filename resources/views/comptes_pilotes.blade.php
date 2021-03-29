@@ -5,11 +5,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
+		@include('Partials/HeadPartial')
 		<link rel="stylesheet" href="{{ asset('css/offre_de_stage.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
 		<title>Comptes Pilotes</title>
 	</head>
 	<!---------HEADER----------------------------------------------------------------------->
@@ -17,7 +14,7 @@
 	<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
 			<!----->
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{{route('home')}}">
 				<img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 				<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 			</a>
@@ -107,7 +104,7 @@
 				</div>
 			</div>
 		</div>
-		@include('LegalPartial')
+		@include('Partials/LegalPartial')
 	</body>
 
 </html>
