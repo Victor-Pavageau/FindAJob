@@ -73,12 +73,12 @@
 						</div>
 						<input id="inputNomVille" class="form-control autocomplete ui-autocomplete-input" type="search" placeholder="Centre" aria-label="Ville" autocomplete="off">
 					</div>
-				<!-------------------Code Postal-------------------------------------------->
+				<!-------------------Promotion-------------------------------------------->
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="basic-addon1">Promotion assignée</span>
 						</div>
-						<input  id="codePostal" type="text" class="form-control" placeholder="Code Postal" aria-label="Code Postal" aria-describedby="basic-addon1">
+						<input  id="promotion" type="text" class="form-control" placeholder="ex : A3" aria-label="promotion" aria-describedby="basic-addon1">
 					</div>
 				</div>
 				<!------------------- </Adresse>-------------------------------------------->
