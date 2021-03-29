@@ -20,3 +20,43 @@ Route::get('/', function () {
 Route::get('/legal', function () {
     return view('legal');
 })->name("legal");
+
+Route::get('/auth', function () {
+    return view('authentification');
+})->name("auth");
+
+Route::get('/mescandidatures', function () {
+    return view('mescandidatures');
+})->name("mescandidatures");
+
+Route::get('/wishlist', function () {
+    return view('wishlist');
+})->name("wishlist");
+
+Route::get('/comptes_pilotes', function () {
+    return view('comptes_pilotes');
+})->name("comptes_pilotes");
+
+Route::get('/droits_delegues', function () {
+    return view('droits_delegues');
+})->name("droits_delegues");
+
+Route::get('/entreprise', function () {
+    return view('entreprise');
+})->name("entreprise");
+
+Route::get('/gerer-delegues', function () {
+    return view('gerer-delegues');
+})->name("gerer-delegues");
+
+Route::get('/offres_de_stage', function () {
+    return view('offres_de_stage');
+})->name("offres_de_stage");
+
+Route::get('/pilote', function () {
+    return view('piloteMain');
+})->name("piloteMain");
+
+Route::get('/comptes_pilotes', function () {
+    return view('comptes_pilotes');
+})->name("comptes_pilotes");
