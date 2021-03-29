@@ -70,9 +70,9 @@
 						<ul><label><input type=checkbox id="CE5"> Consulter les statistiques de l'étudiant </input></label></ul>
 					</div>
 					<div class="col-12 d-flex justify-content-center">
-						<a href="./gerer-delegues.html"><button> Retour</button></a>
+						<a href="./gerer-delegues.html"><button type="button" class="btn red"> Retour</button></a>
 						&emsp;
-						<button onclick="fonctionvalider();"> Appliquer les changements </button>
+						<button type="button" class="btn green" onclick="fonctionvalider();"> Appliquer les changements </button>
 					</div>
 				</div>
 			</div>

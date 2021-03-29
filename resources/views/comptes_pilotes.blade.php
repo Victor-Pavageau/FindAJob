@@ -40,15 +40,15 @@
 
 					<div class="row">
 						<div class="col">
-							<button id="buttonTropAgreable" type="button" class="btn blue"
+							<button type="button" class="btn blue"
 								onclick="ajouterEntreprise()">Créer le compte pilote</button>
 						</div>
 						<div class="col">
-							<button id="buttonTropAgreable" type="button" class="btn green"
+							<button type="button" class="btn green"
 								onclick="ajouterEntreprise()">Modifier le compte pilote</button>
 						</div>
 						<div class="col">
-							<button id="buttonTropAgreable" type="button" class="btn yellow"
+							<button type="button" class="btn yellow"
 								onclick="ajouterEntreprise()">Supprimer le compte pilote</button>
 						</div>
 
@@ -56,7 +56,7 @@
 						<!---------Formulaire de l'entreprise----------------------------------------------------------------------->
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1">Nom</span>
+								<span class="input-group-text">Nom</span>
 							</div>
 							<input type="text" class="form-control" placeholder="Nom du pilote" aria-label="Nom"
 								aria-describedby="basic-addon1">
@@ -64,7 +64,7 @@
 
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1">Prénom</span>
+								<span class="input-group-text">Prénom</span>
 							</div>
 							<input type="text" class="form-control" placeholder="Prénom du pilote" aria-label="Nom"
 								aria-describedby="basic-addon1">
@@ -72,7 +72,7 @@
 
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1">Centre</span>
+								<span class="input-group-text">Centre</span>
 							</div>
 							<input type="text" class="form-control" placeholder="Centre de formation du pilote"
 								aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
@@ -80,14 +80,11 @@
 
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
-								<span class="input-group-text" id="basic-addon1">Promotion assignée</span>
+								<span class="input-group-text">Promotion assignée</span>
 							</div>
 							<input type="text" class="form-control" placeholder="ex : A3" aria-label="Nom d'utilisateur"
 								aria-describedby="basic-addon1">
 						</div>
-
-
-
 					</div>
 				</div>
 

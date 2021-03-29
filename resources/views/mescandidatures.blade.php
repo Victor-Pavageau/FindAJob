@@ -74,7 +74,7 @@
 
 			<aside id="bloc2">
 				<form class="supprimer" method="POST">
-					<button id="buttonTropAgreable" type="submit" class="btn blue">Supprimer la candidature de la wish-list</button>
+					<button type="submit" class="btn blue">Supprimer la candidature de la wish-list</button>
 				</form>
 
 				<div class="offre">
@@ -82,14 +82,14 @@
 				</div>
 				<form class="steps" method="POST">
 					<div>
-						<button type="submit" id="buttonTropAgreable" class="btn red">STEP 1</button>
-						<button type="submit" id="buttonTropAgreable" class="btn red">STEP 2</button>
-						<button type="submit" id="buttonTropAgreable" class="btn red">STEP 3</button>
+						<button type="submit" class="btn red">STEP 1</button>
+						<button type="submit" class="btn red">STEP 2</button>
+						<button type="submit" class="btn red">STEP 3</button>
 					</div>
 					<div>
-						<button type="submit" id="buttonTropAgreable" class="btn red">STEP 4</button>
-						<button type="submit" id="buttonTropAgreable" class="btn red">STEP 5</button>
-						<button type="submit" id="buttonTropAgreable" class="btn red">STEP 6</button>
+						<button type="submit" class="btn red">STEP 4</button>
+						<button type="submit" class="btn red">STEP 5</button>
+						<button type="submit" class="btn red">STEP 6</button>
 					</div>
 				</form>
 				</div>
