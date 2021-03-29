@@ -110,8 +110,8 @@
 <span id="temp"></span>
 <!-- Background image -->
 		
-		<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
-		<script src="{{ asset('css/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+	<script src="{{ asset('css/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 </html>

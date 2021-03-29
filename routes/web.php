@@ -45,9 +45,9 @@ Route::get('/entreprise', function () {
     return view('entreprise');
 })->name("entreprise");
 
-Route::get('/gerer-delegues', function () {
-    return view('gerer-delegues');
-})->name("gerer-delegues");
+Route::get('/gerer_delegues', function () {
+    return view('gerer_delegues');
+})->name("gerer_delegues");
 
 Route::get('/offres_de_stage', function () {
     return view('offres_de_stage');
