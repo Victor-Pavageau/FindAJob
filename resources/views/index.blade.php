@@ -95,7 +95,7 @@
 				carousel ?
 			</div>
 		</aside>
-		@include(LegalPartial)
+		@include('LegalPartial')
 	</body>
 	<script src=".\assets\darkmode\darkMode.js"></script>
 </html>

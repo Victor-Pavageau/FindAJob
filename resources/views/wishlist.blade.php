@@ -66,6 +66,6 @@
 				</div>	
 			</div>
 		</main>
-		@include(LegalPartial)
+		@include('LegalPartial')
 	</body>
 </html>

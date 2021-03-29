@@ -97,6 +97,6 @@
 				</div>
 			</aside>
 		</main>
-		@include(LegalPartial)
+		@include('LegalPartial')
 	</body>
 </html>
