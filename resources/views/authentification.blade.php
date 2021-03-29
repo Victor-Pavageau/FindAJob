@@ -3,11 +3,12 @@
 <!---------HEAD----------------------------------------------------------------------->
 <head>
 	<meta charset="utf-8">
-	<title>Authentification</title>
-	<link rel="stylesheet" href="./assets/vendors/fontawesome/css/all.min.css">
-	<link rel="stylesheet" href="./assets/vendors/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href=".\assets\background_authentification\background.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/authentification.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+	<title>Authentification</title>
 </head>
 <body>
 
@@ -72,12 +73,12 @@
 						</div>
 						<input id="inputNomVille" class="form-control autocomplete ui-autocomplete-input" type="search" placeholder="Centre" aria-label="Ville" autocomplete="off">
 					</div>
-				<!-------------------Code Postal-------------------------------------------->
+				<!-------------------Promotion-------------------------------------------->
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
 							<span class="input-group-text" id="basic-addon1">Promotion assignée</span>
 						</div>
-						<input  id="codePostal" type="text" class="form-control" placeholder="Code Postal" aria-label="Code Postal" aria-describedby="basic-addon1">
+						<input  id="promotion" type="text" class="form-control" placeholder="ex : A3" aria-label="promotion" aria-describedby="basic-addon1">
 					</div>
 				</div>
 				<!------------------- </Adresse>-------------------------------------------->
@@ -109,7 +110,8 @@
 <span id="temp"></span>
 <!-- Background image -->
 		
-		<script src="./assets/vendors/jquery/jquery-3.5.1.min.js"></script>
-		<script src="./assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src=".\assets\javascript\codePostale.js"></script>
+	<script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
+	<script src="{{ asset('css/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
 </body>
+</html>

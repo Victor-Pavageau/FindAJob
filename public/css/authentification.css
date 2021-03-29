@@ -1,0 +1,13 @@
+#general_kenobi{
+	
+    background-image: url('/campus.jpg');
+    height: 100vh;
+    opacity: 70%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+

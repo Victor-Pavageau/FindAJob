@@ -1,0 +1,11 @@
+body {
+    background-color: #2B2C30;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.light-mode {
+    background-color: white;
+    color: #2B2C30;
+}
