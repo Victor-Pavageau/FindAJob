@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\cr;
 use Illuminate\Http\Request;
 
-class EntrepriseController extends Controller
+class StageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class EntrepriseController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -24,8 +24,7 @@ class EntrepriseController extends Controller
      */
     public function create()
     {
-        $nom_entreprise = request('nom_entreprise');
-        dd($nom_entreprise);
+        //
     }
 
     /**
@@ -36,31 +35,7 @@ class EntrepriseController extends Controller
      */
     public function store(Request $request)
     {
-        switch ($request->input('action')) {
-            case 'add':
-                $nom_entreprise = request('nom_entreprise');
-                $domaine_entreprise = request('domaine_entreprise');
-                $mail_entreprise = request('mail_entreprise');
-                $tel_entreprise = request('tel_entreprise');
-                $adresse_entreprise = request('adresse_entreprise');
-                $ville_entreprise = request('ville_entreprise');
-                $zipcode_entreprise = request('zipcode_entreprise');
-                $pays_entreprise = request('pays_entreprise');
-                dd("ca marche pour le create");
-                break;
-    
-            case 'update':
-                dd("ca marche pour l'update");
-                break;
-    
-            case 'note':
-                dd("ca marche pour le note");
-                break;
-
-            case 'delete':
-                dd("ca marche pour le delete");
-                break;
-        }
+        //
     }
 
     /**

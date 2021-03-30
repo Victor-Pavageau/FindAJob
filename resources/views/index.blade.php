@@ -62,7 +62,7 @@
                     <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
                         <div class="card-header">Profil</div>
                         <div class="card-body">
-                            <h5 class="card-title border rounded"><a class= "text-white" href="#">Editer votre profil.</a></h5>
+                            <h5 class="card-title border rounded"><a class= "text-white" href="{{route('mesdonnees')}}">Editer votre profil.</a></h5>
                             <p class="card-text">Modifier les données de l'utilisateur.</p>
                         </div>
                         <div class="card-footer">

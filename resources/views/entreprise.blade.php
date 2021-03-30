@@ -77,20 +77,13 @@
 								</div>
 							</div>
 
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fas fa-city"></i></span>
-										<input type="text" class="form-control" placeholder="Ville" name="ville_entreprise">
-									</div>
-								</div>
-							</div>
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-										<input type="text" class="form-control" placeholder="Code postal" name="zipcode_entreprise">
-									</div>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-city"></i></span>
+									<input type="text" class="form-control" placeholder="Ville" name="ville_entreprise">
+									&emsp;
+									<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+									<input type="text" class="form-control" placeholder="Code postal" name="zipcode_entreprise">
 								</div>
 							</div>
 

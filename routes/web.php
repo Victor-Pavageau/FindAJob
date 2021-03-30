@@ -17,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('entreprise', [EntrepriseController::class, "store"]);
+Route::post('comptes_pilotes', [PiloteController::class, "store"]);
+Route::post('mescandidatures', [CandidatureController::class, "store"]);
+Route::post('gerer_delegues', [DelegueController::class, "store"]);
+Route::post('offres_de_stage', [StageController::class, "store"]);
+Route::post('mesdonnees', [ProfileController::class, "store"]);
+Route::post('wishlist', [WishlistController::class, "store"]);
 
 Route::get('/', function () {
     return view('index');
@@ -62,13 +68,9 @@ Route::get('/pilote', function () {
     return view('piloteMain');
 })->name("piloteMain");
 
-Route::get('/comptes_pilotes', function () {
-    return view('comptes_pilotes');
-})->name("comptes_pilotes");
-
 Route::get('/mesdonnees', function () {
     return view('modifier_Donnees_Personelles');
-})->name("comptes_pilotes");
+})->name("mesdonnees");
 
 Route::get('/identification', function () {
     return view('login');
