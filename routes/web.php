@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Entreprise;
+use App\Http\Controllers\EntrepriseController;
+use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::post('entreprise', [EntrepriseController::class, "create"]);
 
 Route::get('/', function () {
     return view('index');
@@ -64,3 +69,7 @@ Route::get('/comptes_pilotes', function () {
 Route::get('/mesdonnees', function () {
     return view('modifier_Donnees_Personelles');
 })->name("comptes_pilotes");
+
+Route::get('/identification', function () {
+    return view('login');
+})->name("login");

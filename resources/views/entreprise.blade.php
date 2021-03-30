@@ -29,23 +29,26 @@
 
                     <div class="row">
 
+                    <form action="{{ route('entreprise')}}" method="POST">
+                        @csrf
                         <div class="col">
-                            <button type="button" class="btn blue" onclick="ajouterEntreprise()">Ajouter l'Entreprise</button>
+                            <button type="submit" class="btn blue">Ajouter l'Entreprise</button>
+                        </div>
+                        <!-- <div class="col">
+                            <button type="submit" class="btn green">Modifier l'Entreprise</button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn green" onclick="ajouterEntreprise()">Modifier l'Entreprise</button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn yellow" onclick="ajouterEntreprise()">Noter l'Entreprise</button>
-                        </div>
+                            <button type="submit" class="btn yellow">Noter l'Entreprise</button>
+                        </div> -->
 
                         <!---------Formulaire de l'entreprise----------------------------------------------------------------------->
                         <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Nom</span>
+                            <div class="input-group-prepend form-group">
+                                <label class="input-group-text">Nom</label>
+                                <input type="text" class="form-control" placeholder="Nom de l'entreprise" name="nom_entreprise">
                             </div>
-                            <input type="text" class="form-control" placeholder="Nom de l'entreprise" aria-label="Nom" aria-describedby="basic-addon1">
                         </div>
+					</form>
 
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
