@@ -21,7 +21,7 @@
                         </div>
                         <a href="#" class="btn btn-primary">Connexion</a>
                         <input type="checkbox" name="rememberusername" id="rememberusername" value="0">
-                        <label for="rememberusername">Se souvenir du nom d'utilisateur</label>
+                        <label for="rememberusername" style=" color: black;">Se souvenir du nom d'utilisateur</label>
                     </div>
                     <div class="card-footer text-muted">
                         <a href="#" class="badge badge-secondary">Mot de passe oublié</a><a href="#" class="badge badge-secondary">Créer un compte</a>
