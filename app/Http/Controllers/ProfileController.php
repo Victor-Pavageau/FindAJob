@@ -24,7 +24,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -35,7 +35,25 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        switch ($request->input('action')) {
+
+            case 'add':
+
+                $infos_profile = [
+                    $nom = request('nom'),
+                    $prenom = request('prenom'),
+                    $mail = request('mail'),
+                    $centre = request('centre'),
+                    $password = request('password'),
+                ];
+
+                
+
+                echo 'Profil modifié';
+                echo "<script> history.go(-1); </script>";
+                break;
+            
+        }
     }
 
     /**
