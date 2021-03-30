@@ -42,6 +42,7 @@
 							<br><br><br><br>
 
 							<!---------Formulaire de l'entreprise----------------------------------------------------------------------->
+							
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<label class="input-group-text">Nom</label>
@@ -90,16 +91,18 @@
 								</div>
 							</div>
 							<div>
-								<button value="delete" name="action" type="submit" class="btn purple">Supprimer l'offre</button>
+								<button value="delete" name="action" type="submit" class="btn purple">Supprimer l'entreprise</button>
 							</div>
 						</div>
 					</form>
                 </div>
 
-                <div class="col-8 justify-content-center">
-                    <h2>Consulter les entreprises.</h2>
+                <div class="col">
+                    <h2>Consulter comptes délégués.</h2>
+                    <div style="overflow:auto; border:#000000 1px solid; max-width: 500px; min-height: 100px; max-height: 350px; height: auto;">
+                        
+                    </div>
                 </div>
-
             </div>
         </div>
         @include('Partials/LegalPartial')

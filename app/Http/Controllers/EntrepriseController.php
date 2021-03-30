@@ -68,9 +68,6 @@ class EntrepriseController extends Controller
             case 'delete':
                 dd("ca marche pour le delete");
                 break;
-
-            case 'null':
-                break;
         }
     }
 

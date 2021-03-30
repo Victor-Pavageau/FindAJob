@@ -2,6 +2,12 @@
 
 use App\Models\Entreprise;
 use App\Http\Controllers\EntrepriseController;
+use App\Http\Controllers\PiloteController;
+use App\Http\Controllers\CandidatureController;
+use App\Http\Controllers\DelegueController;
+use App\Http\Controllers\StageController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\WishlistController;
 use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
 

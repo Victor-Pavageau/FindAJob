@@ -35,7 +35,20 @@ class DelegueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        switch ($request->input('action')) {
+            
+            case 'search':
+                dd("ca marche pour le search");
+                break;
+    
+            case 'update':
+                dd("ca marche pour l'update");
+                break;
+
+            case 'delete':
+                dd("ca marche pour le delete");
+                break;
+        }
     }
 
     /**

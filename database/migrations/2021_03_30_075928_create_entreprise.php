@@ -22,7 +22,8 @@ class CreateEntreprise extends Migration
             $table->string('zipcode_entreprise');
             $table->string('pays_entreprise');
             $table->string('mail_entreprise');
-            $table->float('confiance_entreprise')->nullable();
+            $table->float('confiance_entreprise');
+            $table->float('note_entreprise')->nullable();
             $table->timestamps();
 
         });
