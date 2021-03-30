@@ -37,9 +37,9 @@ class ProfileController extends Controller
     {
         switch ($request->input('action')) {
 
-            case 'add':
+            case 'update':
 
-                $infos_profile = [
+                /*$infos_profile = [
                     $nom = request('nom'),
                     $prenom = request('prenom'),
                     $mail = request('mail'),
@@ -50,7 +50,8 @@ class ProfileController extends Controller
                 
 
                 echo 'Profil modifié';
-                echo "<script> history.go(-1); </script>";
+                echo "<script> history.go(-1); </script>";*/
+                dd("ca marche pour l'update");
                 break;
             
         }

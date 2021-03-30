@@ -9,6 +9,7 @@
     <body>
         <header>
             @include('Partials/HeaderPartial')
+            <br>
         </header>
 
         <main>
