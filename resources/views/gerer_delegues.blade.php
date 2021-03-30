@@ -4,15 +4,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+		@include('Partials/HeadPartial')
 		<title>Gestion des Délégués</title>
 	</head>
 	
 	<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{{route('home')}}">
 				<img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 				<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 			</a>
@@ -29,42 +27,42 @@
 				<div class="col">
 					<br>
 					<div>
-						<button class="btn btn-outline-primary" onclick="">Ajouter</button>
-						<button class="btn btn-outline-success" onclick="">Modifier</button>
-						<button class="btn btn-outline-warning" onclick="">Supprimer</button>
+						<button type="button" class="btn blue" onclick="">Ajouter</button>
+						<button type="button" class="btn green" onclick="">Modifier</button>
+						<button type="button" class="btn yellow" onclick="">Supprimer</button>
 					</div>
 					<br>
 						
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Nom</span>
+							<span class="input-group-text">Nom</span>
 							<input type="text" class="form-control" placeholder="Nom du délégué">
 						</div>
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Prénom</span>
+							<span class="input-group-text">Prénom</span>
 							<input type="text" class="form-control" placeholder="Prénom du délégué">
 						</div>
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Centre</span>
+							<span class="input-group-text">Centre</span>
 							<input type="text" class="form-control" placeholder="Centre du délégué">
 						</div>
 					</div>
 
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text" id="basic-addon1">Promotion assignée</span>
+							<span class="input-group-text">Promotion assignée</span>
 							<input type="text" class="form-control" placeholder="Promotion du délégué">
 						</div>
 					</div>
 					
 					<div>
-						<button class="btn btn-outline-danger btn-block" onclick="">Rechercher le compte délégué</button>
+						<button type="button" class="btn red" onclick="">Rechercher le compte délégué</button>
 					</div>
 					<br>
 				</div>
@@ -79,25 +77,12 @@
 			
 			<br>
 			<div class="d-flex justify-content-center">
-				<a href="./droits-delegues.html"> <button class="btn btn-outline-info">Modifier les droits du délégué</button></a>
+				<a href="./droits-delegues.html"> <button type="button" class="btn purple">Modifier les droits du délégué</button></a>
 			</div>
 			<br>
 			
 		</div>
+		@include('Partials/LegalPartial')
 	</body>
 	
-	<footer class="bg-dark text-center text-white" >
-		<div class="container p-4 pb-0">
-			<section class="mb-4">
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>				
-		</div>
-		
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-			© 2020 Copyright:
-			<a class="text-white" href="https://mdbootstrap.com/">Mentions légales</a>
-		</div>
-	</footer>
 </html>

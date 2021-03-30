@@ -4,15 +4,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" href="{{ asset('css/fontawesome/css/all.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/bootstrap/css/bootstrap.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
+		@include('Partials/HeadPartial')
 		<title>Gestion des Délégués</title>
 	</head>
 	
 	<header>
 		<nav class="navbar navbar-light" style="background-color: #fff;">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="{{route('home')}}">
 				<img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
 				<p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
 			</a>
@@ -72,29 +70,14 @@
 						<ul><label><input type=checkbox id="CE5"> Consulter les statistiques de l'étudiant </input></label></ul>
 					</div>
 					<div class="col-12 d-flex justify-content-center">
-						<a href="./gerer-delegues.html"><button> Retour</button></a>
+						<button type="button" class="btn red" onclick="history.go(-1)"> Retour</button>
 						&emsp;
-						<button onclick="fonctionvalider();"> Appliquer les changements </button>
+						<button type="button" class="btn green" onclick="fonctionvalider();"> Appliquer les changements </button>
 					</div>
 				</div>
 			</div>
 		</p>
+		@include('Partials/LegalPartial')
 	</body>
-	
 	<script src="{{ asset('js/droits_delegues') }}"></script>
-
-	<footer class="bg-dark text-center text-white" >
-		<div class="container p-4 pb-0">
-			<section class="mb-4">
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
-				<a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>				
-		</div>
-		
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-			© 2020 Copyright:
-			<a class="text-white" href="https://mdbootstrap.com/">Mentions légales</a>
-		</div>
-	</footer>
 </html>

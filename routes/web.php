@@ -16,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    
-    $promotion = Promotion::create([
-    'Nom' => 'BAC']);
-    return view('home');
+    return view('index');
+>>>>>>> 2db4471d75f5c6e4a7d31a6d3596d32eb24edbb6
 })->name("home");
 
 Route::get('/legal', function () {
