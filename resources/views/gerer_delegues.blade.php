@@ -74,7 +74,7 @@
             
             <br>
             <div class="d-flex justify-content-center">
-                <a href="./droits-delegues.html"> <button type="button" class="btn purple">Modifier les droits du délégué</button></a>
+                <a href="{{route('droits_delegues')}}"> <button type="button" class="btn purple">Modifier les droits du délégué</button></a>
             </div>
             <br>
             
