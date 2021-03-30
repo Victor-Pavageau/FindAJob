@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\cr;
+use App\Models\Entreprise;
 use Illuminate\Http\Request;
 
 class EntrepriseController extends Controller
@@ -37,16 +38,20 @@ class EntrepriseController extends Controller
     public function store(Request $request)
     {
         switch ($request->input('action')) {
+            
             case 'add':
-                $nom_entreprise = request('nom_entreprise');
-                $domaine_entreprise = request('domaine_entreprise');
-                $mail_entreprise = request('mail_entreprise');
-                $tel_entreprise = request('tel_entreprise');
-                $adresse_entreprise = request('adresse_entreprise');
-                $ville_entreprise = request('ville_entreprise');
-                $zipcode_entreprise = request('zipcode_entreprise');
-                $pays_entreprise = request('pays_entreprise');
-                dd("ca marche pour le create");
+                $infos_entreprise = [
+                    $nom_entreprise = request('nom_entreprise'),
+                    $domaine_entreprise = request('domaine_entreprise'),
+                    $mail_entreprise = request('mail_entreprise'),
+                    $tel_entreprise = request('tel_entreprise'),
+                    $adresse_entreprise = request('adresse_entreprise'),
+                    $ville_entreprise = request('ville_entreprise'),
+                    $zipcode_entreprise = request('zipcode_entreprise'),
+                    $pays_entreprise = request('pays_entreprise'),
+                    Entreprise::create($request->all())
+                ];
+                
                 break;
     
             case 'update':
