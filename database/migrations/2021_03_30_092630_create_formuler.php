@@ -17,6 +17,12 @@ class CreateFormuler extends Migration
             $table->increments('id');
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_candidature')->unsigned();
+            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
+                ->onUpdate('restrict')
+                ->onDelete('restrict');
+            $table->foreign('id_candidature')->references('id')->on('candidature')
+                ->onUpdate('restrict')
+                ->onDelete('restrict');
         });
     }
 

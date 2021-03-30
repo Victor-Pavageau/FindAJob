@@ -17,6 +17,7 @@ class CreatePosseder extends Migration
             $table->increments('id');
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_competence')->unsigned();
+            
         });
     }
 

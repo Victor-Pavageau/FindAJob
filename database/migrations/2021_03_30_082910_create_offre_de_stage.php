@@ -21,6 +21,7 @@ class CreateOffreDeStage extends Migration
             $table->date('Date');
             $table->integer('Nombre_de_places');
             $table->integer('id_entreprise')->unsigned();
+            
 
         });
     }
