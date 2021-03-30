@@ -25,8 +25,7 @@ class EntrepriseController extends Controller
      */
     public function create()
     {
-        $nom_entreprise = request('nom_entreprise');
-        dd($nom_entreprise);
+
     }
 
     /**
@@ -40,19 +39,22 @@ class EntrepriseController extends Controller
         switch ($request->input('action')) {
             
             case 'add':
+
                 $infos_entreprise = [
                     $nom_entreprise = request('nom_entreprise'),
                     $domaine_entreprise = request('domaine_entreprise'),
                     $mail_entreprise = request('mail_entreprise'),
-                    $tel_entreprise = request('tel_entreprise'),
-                    $adresse_entreprise = request('adresse_entreprise'),
-                    $ville_entreprise = request('ville_entreprise'),
+                    $nombre_stagiaire_entreprise = request('nombre_stagiaire_entreprise'),
+                    $confiance_entreprise = request('confiance_entreprise'),
                     $zipcode_entreprise = request('zipcode_entreprise'),
                     $pays_entreprise = request('pays_entreprise'),
+                    $adresse_entreprise = request('adresse_entreprise'),
+                    
                     Entreprise::create($request->all())
                 ];
+
                 echo 'Entreprise ajoutée';
-                return view('entreprise');
+                echo "<script> history.go(-1); </script>";
                 break;
     
             case 'update':
@@ -65,6 +67,9 @@ class EntrepriseController extends Controller
 
             case 'delete':
                 dd("ca marche pour le delete");
+                break;
+
+            case 'null':
                 break;
         }
     }
@@ -114,3 +119,5 @@ class EntrepriseController extends Controller
         //
     }
 }
+
+?>

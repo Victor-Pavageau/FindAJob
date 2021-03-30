@@ -24,7 +24,7 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4 justify-content-center">
                     <h2>Gerer les entreprises.</h2>
 					<form action="" method="post">
 						@csrf
@@ -65,8 +65,8 @@
 
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
-									<input type="text" class="form-control" placeholder="Numéro de l'entreprise" name="tel_entreprise">
+									<span class="input-group-text">Note de Confiance de l'entreprise</span>
+									<input type="text" class="form-control" placeholder="Note sur 10" name="confiance_entreprise">
 								</div>
 							</div>
 
@@ -74,13 +74,6 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-building"></i></span>
 									<input type="text" class="form-control" placeholder="Adresse de l'entreprise" name="adresse_entreprise">
-								</div>
-							</div>
-
-							<div class="input-group mb-3">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fas fa-city"></i></span>
-									<input type="text" class="form-control" placeholder="Ville" name="ville_entreprise">
 									&emsp;
 									<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
 									<input type="text" class="form-control" placeholder="Code postal" name="zipcode_entreprise">
@@ -91,6 +84,9 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-globe-africa"></i></span>
 									<input type="text" class="form-control" placeholder="Pays" name="pays_entreprise">
+									&emsp;
+									<span class="input-group-text">Nombre de Stagiaire</span>
+									<input type="text" class="form-control" value="0" name="nombre_stagiaire_entreprise">
 								</div>
 							</div>
 							<div>
@@ -100,7 +96,7 @@
 					</form>
                 </div>
 
-                <div class="col-8">
+                <div class="col-8 justify-content-center">
                     <h2>Consulter les entreprises.</h2>
                 </div>
 
