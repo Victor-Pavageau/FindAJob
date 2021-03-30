@@ -17,6 +17,7 @@ class CreateViser extends Migration
             $table->increments('id');
             $table->integer('id_offre_de_stage')->unsigned();
             $table->integer('id_promotion')->unsigned();
+            
         });
     }
 

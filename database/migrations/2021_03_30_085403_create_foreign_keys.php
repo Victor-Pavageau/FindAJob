@@ -76,43 +76,7 @@ class CreateForeignKeys extends Migration
                 ->onUpdate('restrict');
         });
 
-        Schema::table('concerner', function (Blueprint $table) {
-            $table->foreign('id_candidature')->references('id')->on('candidature')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-        });
-
-        Schema::table('formuler', function (Blueprint $table) {
-            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_candidature')->references('id')->on('candidature')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-        });
-
-        Schema::table('proposer', function (Blueprint $table) {
-            $table->foreign('id_entreprise')->references('id')->on('entreprise')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-        });
-
-        Schema::table('respecter', function (Blueprint $table) {
-            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_droit')->references('id')->on('droit')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-        });
     }
-
     /**
      * Reverse the migrations.
      *
