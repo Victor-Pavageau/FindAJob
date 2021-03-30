@@ -23,6 +23,7 @@ class CreateProposer extends Migration
             $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
+            $table->timestamps();
         });
     }
 

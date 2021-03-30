@@ -19,6 +19,7 @@ class CreateConcerner extends Migration
             $table->integer('id_candidature')->unsigned();
             $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')->onUpdate('restrict')->onDelete('restrict');
             $table->foreign('id_candidature')->references('id')->on('candidature')->onUpdate('restrict')->onDelete('restrict');
+            $table->timestamps();
         });
     }
 

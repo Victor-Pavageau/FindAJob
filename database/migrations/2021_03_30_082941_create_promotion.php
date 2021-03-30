@@ -16,6 +16,7 @@ class CreatePromotion extends Migration
         Schema::create('promotion', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Nom');
+            $table->timestamps();
         });
     }
 

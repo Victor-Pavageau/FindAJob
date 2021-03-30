@@ -15,12 +15,13 @@ class CreateOffreDeStage extends Migration
     {
         Schema::create('offre_de_stage', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('Intitule');
-            $table->string('Duree');
-            $table->integer('Remuneration');
-            $table->date('Date');
-            $table->integer('Nombre_de_places');
+            $table->string('intitule');
+            $table->string('duree_du_stage');
+            $table->integer('base_de_remuneration');
+            $table->date('date_du_stage');
+            $table->string('nombre_de_places');
             $table->integer('id_entreprise')->unsigned();
+            $table->timestamps();
             
 
         });

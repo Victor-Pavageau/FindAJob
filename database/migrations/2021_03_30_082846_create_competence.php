@@ -17,6 +17,7 @@ class CreateCompetence extends Migration
             $table->increments('id');
             $table->string('Nom');
             $table->integer('Niveau');
+            $table->timestamps();
         });
     }
 

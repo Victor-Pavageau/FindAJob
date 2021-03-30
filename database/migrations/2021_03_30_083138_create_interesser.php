@@ -17,6 +17,7 @@ class CreateInteresser extends Migration
             $table->increments('id');
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_offre_de_stage')->unsigned();
+            $table->timestamps();
             
 
         });

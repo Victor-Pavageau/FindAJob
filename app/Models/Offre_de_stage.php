@@ -9,5 +9,5 @@ class Offre_de_stage extends Model
 {
     use HasFactory;
     protected $table = "offre_de_stage";
-    protected $fillable = ['duree_stage','salaire_stage','date_stage','places_stage'];
+    protected $fillable = ['intitule','duree_du_stage','base_de_remuneration','date_du_stage','nombre_de_places'];
 }

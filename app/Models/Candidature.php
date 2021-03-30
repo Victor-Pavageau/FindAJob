@@ -9,5 +9,5 @@ class Candidature extends Model
 {
     use HasFactory;
     protected $table = "candidature";
-    protected $fillable = ['Date','Fiche_de_validation','Convention','Statut'];
+    protected $fillable = ['Fiche_de_validation','Convention'];
 }

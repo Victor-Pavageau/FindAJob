@@ -24,6 +24,7 @@ class CreateUtilisateur extends Migration
             $table->string('CV');
             $table->string('Lettre_de_motivation');
             $table->string('E_mail');
+            $table->timestamps();
 
         });
     }

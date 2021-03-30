@@ -23,6 +23,7 @@ class CreateFormuler extends Migration
             $table->foreign('id_candidature')->references('id')->on('candidature')
                 ->onUpdate('restrict')
                 ->onDelete('restrict');
+            $table->timestamps();
         });
     }
 

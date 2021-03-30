@@ -6,7 +6,7 @@ use App\Models\cr;
 use App\Models\Offre_de_stage;
 use Illuminate\Http\Request;
 
-class StageController extends Controller
+class Offre_de_stageController extends Controller
 {
     /**
      * Display a listing of the resource.
