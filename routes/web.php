@@ -1,10 +1,7 @@
 <?php
 
 use App\Models\Entreprise;
-<<<<<<< HEAD
 use App\Http\Controllers\EntrepriseController;
-=======
->>>>>>> b1bc0b612d2264e4a064fb3ba5df87bcd1f2dfdc
 use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
 
