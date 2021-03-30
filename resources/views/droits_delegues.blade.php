@@ -2,6 +2,9 @@
 <html lang="fr">
     <head>
         @include('Partials/HeadPartial')
+
+        <link rel="stylesheet" href="{{ asset('css/hover.css') }}">
+        
         <title>Gestion des Délégués</title>
     </head>
     
