@@ -24,6 +24,10 @@ class CreateUtilisateur extends Migration
             $table->string('CV');
             $table->string('Lettre_de_motivation');
             $table->string('E_mail');
+            $table->integer('id_promotion')->unsigned();
+            $table->foreign('id_promotion')->references('id')->on('promotion')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->timestamps();
 
         });

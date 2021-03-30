@@ -46,6 +46,7 @@ class Offre_de_stageController extends Controller
                     $base_de_remuneration = request('base_de_remuneration'),
                     $date_du_stage = request('date_du_stage'),
                     $nombre_de_places = request('nombre_de_places'),
+                    $id_entreprise = request('id_entreprise'),
                     Offre_de_stage::create($request->all())
                 ];
 
