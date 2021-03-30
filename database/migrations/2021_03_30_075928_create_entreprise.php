@@ -19,10 +19,11 @@ class CreateEntreprise extends Migration
             $table->string('domaine_entreprise');
             $table->string('adresse_entreprise');
             $table->string('ville_entreprise');
-            $table->string('tel_entreprise');
+            $table->integer('nombre_stagiaire_entreprise');
             $table->string('zipcode_entreprise');
             $table->string('pays_entreprise');
             $table->string('mail_entreprise');
+            $table->float('note_entreprise')->nullable();
             $table->timestamps();
 
         });
