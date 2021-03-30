@@ -10,7 +10,7 @@
 		<header>
             @include('Partials/HeaderPartial')
         </header>
-		
+
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4 justify-content-center">
@@ -87,7 +87,7 @@
                 </div>
 
                 <div class="col">
-                    <h2>Consulter comptes délégués.</h2>
+                    <h2>Consulter les entreprises.</h2>
                     <div style="overflow:auto; border:#000000 1px solid; max-width: 500px; min-height: 100px; max-height: 350px; height: auto;">
                         
                     </div>

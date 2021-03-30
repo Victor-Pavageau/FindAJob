@@ -16,6 +16,7 @@
                 <form action="" method="post">
                     @csrf
                     <div  class="text-light" style="max-width: 36rem;">
+                        <br>
                         <button type="button" class="btn red btn-block" onclick="history.go(-1)"> Retour</button>
                         <br>
                         <div class="card-header text-center">
@@ -61,7 +62,7 @@
                         <br>
                         
                         <div class="d-flex justify-content-center">
-                            <button value="add"  name="action" type="submit" class="btn yellow">Enregistrer les données</button>
+                            <button value="update"  name="action" type="submit" class="btn yellow">Enregistrer les données</button>
                         </div>
                         <br>
                     </div>
