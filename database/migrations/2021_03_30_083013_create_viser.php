@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateForeignKeys extends Migration
+class CreateViser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateForeignKeys extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function(Blueprint $table) {
-            $table->foreign('user_id')->references('id')->on('users')
-                        ->onDelete('restrict')
-                        ->onUpdate('restrict');
+        Schema::create('viser', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('id_offre_de_stage')->unsigned();
+            $table->integer('id_promotion')->unsigned();
         });
     }
 
@@ -27,6 +27,6 @@ class CreateForeignKeys extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('foreign_keys');
+        Schema::dropIfExists('viser');
     }
 }
