@@ -35,7 +35,33 @@ class StageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        switch ($request->input('action')) {
+
+            case 'add':
+
+                $infos_stage = [
+                    $duree_stage = request('duree_stage'),
+                    $salaire_stage = request('salaire_stage'),
+                    $date_stage = request('date_stage'),
+                    $places_stage = request('places_stage')
+                ];
+
+                echo 'Offre de stage ajoutée';
+                echo "<script> history.go(-1); </script>";
+                break;
+            
+            case 'search':
+                dd("ca marche pour le search");
+                break;
+    
+            case 'update':
+                dd("ca marche pour l'update");
+                break;
+
+            case 'delete':
+                dd("ca marche pour le delete");
+                break;
+        }
     }
 
     /**
@@ -83,3 +109,5 @@ class StageController extends Controller
         //
     }
 }
+
+?>
