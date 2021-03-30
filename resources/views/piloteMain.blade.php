@@ -4,20 +4,12 @@
         @include('Partials/HeadPartial')
         <title>Acceuil Pilotes</title>
     </head>
-    <header>
-        <nav class="navbar navbar-light" style="background-color: #fff;">
-            <a class="navbar-brand" href="{{route('home')}}">
-                <img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
-                <p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
-            </a>
-            <form class="form-inline">
-                <button class="btn btn-outline-success mr-sm-4" class="btn btn-dark" type="submit">Se connecter</button>
-                <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-success" type="submit">S'inscrire</button>
-            </form>
-        </nav>
-    </header>
 
     <body>
+        <header>
+            @include('Partials/HeaderPartial')
+        </header>
+        
         <main>
             <!-------------------------------4 cards-------------------------->
             <div class="d-flex justify-content-center mt-3">
