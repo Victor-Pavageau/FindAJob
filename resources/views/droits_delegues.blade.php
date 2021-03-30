@@ -86,5 +86,5 @@
         </p>
         @include('Partials/LegalPartial')
     </body>
-    <script src="{{ asset('js/droits_delegues') }}"></script>
+    <script src="{{ asset('js/droits_delegues.js') }}"></script>
 </html>
