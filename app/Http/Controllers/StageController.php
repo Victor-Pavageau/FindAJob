@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\cr;
+use App\Models\Offre_de_stage;
 use Illuminate\Http\Request;
 
 class StageController extends Controller
@@ -43,8 +44,11 @@ class StageController extends Controller
                     $duree_stage = request('duree_stage'),
                     $salaire_stage = request('salaire_stage'),
                     $date_stage = request('date_stage'),
-                    $places_stage = request('places_stage')
+                    $places_stage = request('places_stage'),
+                    Offre_de_stage::create($request->all())
                 ];
+
+                
 
                 echo 'Offre de stage ajoutée';
                 echo "<script> history.go(-1); </script>";

@@ -9,4 +9,6 @@ class Competence extends Model
 {
     use HasFactory;
     protected $table = "competence";
+    protected $fillable = ['Nom','Niveau'];
+
 }

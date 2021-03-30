@@ -9,4 +9,6 @@ class Droit extends Model
 {
     use HasFactory;
     protected $table = "droit";
+    protected $fillable = ['SFx'];
+
 }

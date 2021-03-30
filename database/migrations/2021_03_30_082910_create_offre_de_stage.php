@@ -16,7 +16,7 @@ class CreateOffreDeStage extends Migration
         Schema::create('offre_de_stage', function (Blueprint $table) {
             $table->increments('id');
             $table->string('Intitule');
-            $table->integer('Duree');
+            $table->string('Duree');
             $table->integer('Remuneration');
             $table->date('Date');
             $table->integer('Nombre_de_places');
