@@ -48,7 +48,7 @@
 					<div class="card text-white bg-success mb-3" style="max-width: 18rem;">
 						<div class="card-header">Stage</div>
 						<div class="card-body">
-							<h5 class="card-title border rounded"><a class= "text-white" href="{{route('offre_de_stage')}}">Gerer les stages.</a></h5>
+							<h5 class="card-title border rounded"><a class= "text-white" href="{{route('offres_de_stage')}}">Gerer les stages.</a></h5>
 							<p class="card-text">Rechercher une offre, Créer, Modifier, Supprimer et Consulter les statistiques des offres.</p>
 						</div>
 						<div class="card-footer">
