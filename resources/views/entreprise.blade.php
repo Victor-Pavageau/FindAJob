@@ -32,26 +32,27 @@
 					<h2>Gerer les entreprises.</h2>
 
 					<div class="row">
-						<div class="col">
-							<button type="button" class="btn blue" onclick="ajouterEntreprise()">Ajouter l'Entreprise</button>
-						</div>
-						<div class="col">
-							<button type="button" class="btn green" onclick="ajouterEntreprise()">Modifier l'Entreprise</button>
-						</div>
-						<div class="col">
-							<button type="button" class="btn yellow" onclick="ajouterEntreprise()">Noter l'Entreprise</button>
-						</div>
+						<form action="{{ route('entreprise')}}" method="POST">
+							@csrf
+							<div class="col">
+								<button type="submit" class="btn blue">Ajouter l'Entreprise</button>
+							</div>
+							<!-- <div class="col">
+								<button type="submit" class="btn green">Modifier l'Entreprise</button>
+							</div>
+							<div class="col">
+								<button type="submit" class="btn yellow">Noter l'Entreprise</button>
+							</div> -->
 
 
-						<!---------Formulaire de l'entreprise----------------------------------------------------------------------->
-						<div class="input-group mb-3">
-							<form action="" method="POST">
+							<!---------Formulaire de l'entreprise----------------------------------------------------------------------->
+							<div class="input-group mb-3">
 								<div class="input-group-prepend form-group">
-									<span class="input-group-text">Nom</span>
-									<input type="text" class="form-control" placeholder="Nom de l'entreprise" aria-label="Nom" aria-describedby="basic-addon1" name="nom_entreprise">
+									<label class="input-group-text">Nom</label>
+									<input type="text" class="form-control" placeholder="Nom de l'entreprise" name="nom_entreprise">
 								</div>
-							</form>
-						</div>
+							</div>
+						</form>
 
 						<div class="input-group mb-3">
 							<div class="input-group-prepend">
