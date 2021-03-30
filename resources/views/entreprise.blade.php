@@ -26,86 +26,85 @@
             <div class="row">
                 <div class="col-4">
                     <h2>Gerer les entreprises.</h2>
+					<form action="" method="post">
+						@csrf
+						<div class="row">
+							<div class="col">
+								<button value="add"  name="action" type="submit" class="btn blue">Ajouter l'Entreprise</button>
+							</div>
+							<div class="col">
+								<button value="update" name="action" type="submit" class="btn green">Modifier l'Entreprise</button>
+							</div>
+							<div class="col">
+								<button value="note" name="action" type="submit" class="btn yellow">Noter l'Entreprise</button>
+							</div>
 
-                    <div class="row">
+							<br><br><br><br>
 
-                    <form action="{{ route('entreprise')}}" method="POST">
-                        @csrf
-                        <div class="col">
-                            <button name="add"  type="submit" class="btn blue">Ajouter l'Entreprise</button>
-                        </div>
-                        <div class="col">
-                            <button name="update" type="submit" class="btn green">Modifier l'Entreprise</button>
-                        </div>
-                        <div class="col">
-                            <button name="note" type="submit" class="btn yellow">Noter l'Entreprise</button>
-                        </div>
-						<div class="col">
-                            <button type="submit" class="btn purple">Supprimer l'offre</button>
-                        </div>
+							<!---------Formulaire de l'entreprise----------------------------------------------------------------------->
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<label class="input-group-text">Nom</label>
+									<input type="text" class="form-control" placeholder="Nom de l'entreprise" name="nom_entreprise">
+								</div>
+							</div>
 
-                        <!---------Formulaire de l'entreprise----------------------------------------------------------------------->
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend form-group">
-                                <label class="input-group-text">Nom</label>
-                                <input type="text" class="form-control" placeholder="Nom de l'entreprise" name="nom_entreprise">
-                            </div>
-                        </div>
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text">Domaine</span>
+									<input type="text" class="form-control" placeholder="Domaine de spécialité" name="domaine_entreprise">
+								</div>
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-at"></i></span>
+									<input type="text" class="form-control" placeholder="Adresse mail de l'entreprise" name="mail_entreprise">
+								</div>
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+									<input type="text" class="form-control" placeholder="Numéro de l'entreprise" name="tel_entreprise">
+								</div>
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-building"></i></span>
+									<input type="text" class="form-control" placeholder="Adresse de l'entreprise" name="adresse_entreprise">
+								</div>
+							</div>
+
+							<div class="col">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-city"></i></span>
+										<input type="text" class="form-control" placeholder="Ville" name="ville_entreprise">
+									</div>
+								</div>
+							</div>
+							<div class="col">
+								<div class="input-group mb-3">
+									<div class="input-group-prepend">
+										<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+										<input type="text" class="form-control" placeholder="Code postal" name="zipcode_entreprise">
+									</div>
+								</div>
+							</div>
+
+							<div class="input-group mb-3">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-globe-africa"></i></span>
+									<input type="text" class="form-control" placeholder="Pays" name="pays_entreprise">
+								</div>
+							</div>
+							<div>
+								<button value="delete" name="action" type="submit" class="btn purple">Supprimer l'offre</button>
+							</div>
+						</div>
 					</form>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Domaine</span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Domaine de spécialité" aria-label="Nom" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-at"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Adresse mail de l'entreprise" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Adresse mail de l'entreprise" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-building"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Adresse de l'entreprise" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </div>
-
-                        <div class="col">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-city"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Ville" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Code postal" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
-                            </div>
-                        </div>
-
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-globe-africa"></i></span>
-                            </div>
-                            <input type="text" class="form-control" placeholder="Pays" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
-                        </div>
-                        
-                    </div>
                 </div>
 
                 <div class="col-8">

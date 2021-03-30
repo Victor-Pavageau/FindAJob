@@ -36,7 +36,33 @@ class EntrepriseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        switch ($request->input('action')) {
+            case 'add':
+                $infos_entreprise = [
+                    $nom_entreprise = request('nom_entreprise'),
+                    $domaine_entreprise = request('domaine_entreprise'),
+                    $mail_entreprise = request('mail_entreprise'),
+                    $tel_entreprise = request('tel_entreprise'),
+                    $adresse_entreprise = request('adresse_entreprise'),
+                    $ville_entreprise = request('ville_entreprise'),
+                    $zipcode_entreprise = request('zipcode_entreprise'),
+                    $pays_entreprise = request('pays_entreprise'),
+                ];
+                dd($infos_entreprise, "ca marche pour le create");
+                break;
+    
+            case 'update':
+                dd("ca marche pour l'update");
+                break;
+    
+            case 'note':
+                dd("ca marche pour le note");
+                break;
+
+            case 'delete':
+                dd("ca marche pour le delete");
+                break;
+        }
     }
 
     /**

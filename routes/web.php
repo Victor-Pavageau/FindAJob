@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('entreprise', [EntrepriseController::class, "create"]);
+Route::post('entreprise', [EntrepriseController::class, "store"]);
 
 Route::get('/', function () {
     return view('index');
