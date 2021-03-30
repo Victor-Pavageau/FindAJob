@@ -51,7 +51,8 @@ class EntrepriseController extends Controller
                     $pays_entreprise = request('pays_entreprise'),
                     Entreprise::create($request->all())
                 ];
-                
+                echo 'Entreprise ajoutée';
+                return view('entreprise');
                 break;
     
             case 'update':
