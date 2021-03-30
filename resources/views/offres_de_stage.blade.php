@@ -45,35 +45,35 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" >Intitulé</span>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="intitule">
                                 </div>
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Durée du stage</span>
-                                    <input type="text" class="form-control" placeholder="ex : 6 mois" name="duree_stage">
+                                    <input type="text" class="form-control" placeholder="ex : 6 mois" name="duree_du_stage">
                                 </div>
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Base de rémunération</span>
-                                    <input type="text" class="form-control" placeholder="ex : 2000€" name="salaire_stage">
+                                    <input type="text" class="form-control" placeholder="ex : 2000€" name="base_de_remuneration">
                                 </div>                            
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">Date de l'offre</span>
-                                    <input type="Date" class="form-control" placeholder="Numéro de téléphone" name="date_stage">
+                                    <span class="input-group-text">Date du stage</span>
+                                    <input type="Date" class="form-control" placeholder="Numéro de téléphone" name="date_du_stage">
                                 </div>
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Nombre de places</span>
-                                    <input type="text" class="form-control" name="places_stage">
+                                    <input type="text" class="form-control" name="nombre_de_places">
                                 </div>
                             </div>
                         </form>

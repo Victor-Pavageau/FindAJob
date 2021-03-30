@@ -40,23 +40,6 @@
                         <input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
                     </div>
 
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Date de naissance</span>
-                        </div>
-                        <input type="Date" class="form-control"  aria-describedby="basic-addon1">
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text">Sex</label>
-                        </div>
-                        <select class="custom-select">
-                            <option value="1">Homme</option>
-                            <option value="2">Femme</option>
-                            <option value="3">Autre</option>
-                        </select>
-                    </div>
                         <div id="Adresse">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
@@ -64,7 +47,7 @@
                                 </div>
                                 <input id="inputNomVille" class="form-control autocomplete ui-autocomplete-input" type="search" placeholder="Centre" aria-label="Ville" autocomplete="off">
                             </div>
-                        <!-------------------Promotion-------------------------------------------->
+                         <!-------------------Promotion-------------------------------------------->
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Promotion assignée</span>
