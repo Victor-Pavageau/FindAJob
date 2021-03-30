@@ -32,14 +32,17 @@
                     <form action="{{ route('entreprise')}}" method="POST">
                         @csrf
                         <div class="col">
-                            <button type="submit" class="btn blue">Ajouter l'Entreprise</button>
-                        </div>
-                        <!-- <div class="col">
-                            <button type="submit" class="btn green">Modifier l'Entreprise</button>
+                            <button name="add"  type="submit" class="btn blue">Ajouter l'Entreprise</button>
                         </div>
                         <div class="col">
-                            <button type="submit" class="btn yellow">Noter l'Entreprise</button>
-                        </div> -->
+                            <button name="update" type="submit" class="btn green">Modifier l'Entreprise</button>
+                        </div>
+                        <div class="col">
+                            <button name="note" type="submit" class="btn yellow">Noter l'Entreprise</button>
+                        </div>
+						<div class="col">
+                            <button type="submit" class="btn purple">Supprimer l'offre</button>
+                        </div>
 
                         <!---------Formulaire de l'entreprise----------------------------------------------------------------------->
                         <div class="input-group mb-3">
