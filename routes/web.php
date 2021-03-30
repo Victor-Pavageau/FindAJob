@@ -21,9 +21,9 @@ Route::get('/legal', function () {
     return view('legal');
 })->name("legal");
 
-Route::get('/auth', function () {
-    return view('authentification');
-})->name("auth");
+Route::get('/inscription', function () {
+    return view('inscription');
+})->name("inscription");
 
 Route::get('/mescandidatures', function () {
     return view('mescandidatures');
@@ -59,4 +59,8 @@ Route::get('/pilote', function () {
 
 Route::get('/comptes_pilotes', function () {
     return view('comptes_pilotes');
+})->name("comptes_pilotes");
+
+Route::get('/mesdonnees', function () {
+    return view('modifier_Donnees_Personelles');
 })->name("comptes_pilotes");
