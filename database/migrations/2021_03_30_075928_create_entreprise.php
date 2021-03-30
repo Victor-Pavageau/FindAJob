@@ -16,13 +16,12 @@ class CreateEntreprise extends Migration
         Schema::create('entreprise', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom_entreprise');
-            $table->string('domaine_entreprise');
-            $table->string('adresse_entreprise');
-            $table->string('ville_entreprise');
-            $table->string('tel_entreprise');
-            $table->string('zipcode_entreprise');
-            $table->string('pays_entreprise');
-            $table->string('mail_entreprise');
+            $table->string('Secteur');
+            $table->string('Localite');
+            $table->integer('Nombre_de_stagiaire_CESI');
+            $table->integer('Note_globale');
+            $table->integer('Confiance');
+            $table->string('E_mail');
             $table->timestamps();
 
         });
