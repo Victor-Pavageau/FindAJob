@@ -15,8 +15,8 @@ class CreateConcerner extends Migration
     {
         Schema::create('concerner', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_offre_de_stage')->unsigned();
             $table->integer('id_candidature')->unsigned();
+            $table->integer('id_offre_de_stage')->unsigned();
         });
     }
 
