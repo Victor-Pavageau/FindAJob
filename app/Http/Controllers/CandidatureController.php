@@ -35,7 +35,19 @@ class CandidatureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        switch ($request->input('action')) {
+            
+            case 'add':
+                $infos_candidature = [
+                    $fiche_validation_candidature = request('fiche_validation_candidature'),
+                    $convention_candidature = request('convention_candidature')
+                ];
+                echo 'Candidature ajoutée';
+                echo "<script> history.go(-1); </script>";
+                break;
+
+        }
+
     }
 
     /**
@@ -83,3 +95,4 @@ class CandidatureController extends Controller
         //
     }
 }
+?>
