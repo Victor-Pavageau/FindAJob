@@ -76,4 +76,26 @@ class UtilisateurController extends Controller
             return redirect('identification')->withCookie(Cookie::forget('utilisateur'));
         }
     }
+
+    function modify(Request $request){
+        $request->validate([
+            'Nom' => 'required',
+            'Prenom' => 'required',
+            'E_mail' => 'required|email|unique:Utilisateur',
+            'Centre' => 'required',
+            'Promotion' => 'required',
+            'password'=> 'required|min:4|max:256',
+
+        ]);
+
+        $utilisateur = new Utilisateur;
+        $utilisateur->password = Hash::make($request->password);
+        $utilisateur->Nom = $request->Nom;
+        $utilisateur->Prenom = $request->Prenom;
+        $utilisateur->Type = $request->Type;
+        $utilisateur->E_mail = $request->E_mail;
+        $utilisateur->Centre = $request->Centre;
+        $utilisateur->id_promotion = DB::table('promotion')->where('Nom', $request->Promotion)->value('id');
+
+    }
 }
