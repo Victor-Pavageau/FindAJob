@@ -106,7 +106,7 @@
                 <div class="col">
                     <h2>Consulter les entreprises.</h2>
                     <div style="overflow:auto; border:#000000 1px solid; max-width: 500px; min-height: 100px; max-height: 350px; height: auto;">
-                        
+						{{ DB::table('entreprise')->get() }}
                     </div>
                 </div>
             </div>
