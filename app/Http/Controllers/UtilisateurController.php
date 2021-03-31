@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Utilisateur;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Database\QueryException;
+
+
 
 class UtilisateurController extends Controller
 {
@@ -27,6 +31,7 @@ class UtilisateurController extends Controller
             'password'=> 'required|min:4|max:256',
 
         ]);
+
         $utilisateur = new Utilisateur;
         $utilisateur->password = Hash::make($request->password);
         $utilisateur->Nom = $request->Nom;
@@ -35,13 +40,41 @@ class UtilisateurController extends Controller
         $utilisateur->E_mail = $request->E_mail;
         $utilisateur->Centre = $request->Centre;
         $utilisateur->id_promotion = DB::table('promotion')->where('Nom', $request->Promotion)->value('id');
-        $query = $utilisateur->save();
+        
+        try{
+            $query = $utilisateur->save();
+            return back()->with('success', 'Inscription réussie');
+        } catch(QueryException  $ex){
+            return back()->with('fail',"Erreur");
+        }
+        
+    }
 
-        if($query){
-            return back()->with('success', 'Inscription reussi');
+    function check(Request $request){
+        $request->validate([
+            'E_mail' => 'required|email',
+            'password'=> 'required|min:4|max:256',
+        ]);
+        
+        $utilisateur = Utilisateur::where('E_mail','=', $request->E_mail)->first();
+        if($utilisateur){
+            if(Hash::check($request->password, $utilisateur->password)){
+                Cookie::queue('utilisateur',$utilisateur,86400);
+                return redirect(route('home'));
+            }
+            else{
+                return back()->with('fail','Mot de pass incorrect');
+            }
         }
         else{
-            return back()->with('fail','Guillaume stagiaire');
+            return back()->with('fail',"Cette email n'a pas de compte");
+        }
+    }
+
+    function logout(){
+        if(Cookie::get('utilisateur')){
+            Cookie::forget('utilisateur');
+            redirect('identification');
         }
     }
 }

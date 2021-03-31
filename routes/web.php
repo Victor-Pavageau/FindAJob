@@ -24,62 +24,64 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('entreprise', [EntrepriseController::class, "store"]);
-Route::post('comptes_pilotes', [PiloteController::class, "store"]);
-Route::post('mescandidatures', [CandidatureController::class, "store"]);
-Route::post('gerer_delegues', [DelegueController::class, "store"]);
-Route::post('offres_de_stage', [Offre_de_stageController::class, "store"]);
-Route::post('mesdonnees', [ProfileController::class, "store"]);
-Route::post('wishlist', [WishlistController::class, "store"]);
+Route::post('entreprise', [EntrepriseController::class, "store"])->middleware('checkIdentifier');
+Route::post('comptes_pilotes', [PiloteController::class, "store"])->middleware('checkIdentifier');
+Route::post('mescandidatures', [CandidatureController::class, "store"])->middleware('checkIdentifier');
+Route::post('gerer_delegues', [DelegueController::class, "store"])->middleware('checkIdentifier');
+Route::post('offres_de_stage', [Offre_de_stageController::class, "store"])->middleware('checkIdentifier');
+Route::post('mesdonnees', [ProfileController::class, "store"])->middleware('checkIdentifier');
+Route::post('wishlist', [WishlistController::class, "store"])->middleware('checkIdentifier');
 
 Route::get('/', function () {
     return view('index');
-})->name("home");
+})->name("home")->middleware('checkIdentifier');
 
 Route::get('/legal', function () {
     return view('legal');
-})->name("legal");
+})->name("legal")->middleware('checkIdentifier');
 
 Route::get('/inscription', function () {
     return view('inscription');
-})->name("inscription");
+})->name("inscription")->middleware('checkIdentifier');
 
 Route::get('/mescandidatures', function () {
     return view('mescandidatures');
-})->name("mescandidatures");
+})->name("mescandidatures")->middleware('checkIdentifier');
 
 Route::get('/wishlist', function () {
     return view('wishlist');
-})->name("wishlist");
+})->name("wishlist")->middleware('checkIdentifier');
 
 Route::get('/comptes_pilotes', function () {
     return view('comptes_pilotes');
-})->name("comptes_pilotes");
+})->name("comptes_pilotes")->middleware('checkIdentifier');
 
 Route::get('/droits_delegues', function () {
     return view('droits_delegues');
-})->name("droits_delegues");
+})->name("droits_delegues")->middleware('checkIdentifier');
 
 Route::get('/entreprise', function () {
     return view('entreprise');
-})->name("entreprise");
+})->name("entreprise")->middleware('checkIdentifier');
 
 Route::get('/gerer_delegues', function () {
     return view('gerer_delegues');
-})->name("gerer_delegues");
+})->name("gerer_delegues")->middleware('checkIdentifier');
 
 Route::get('/offres_de_stage', function () {
     return view('offres_de_stage');
-})->name("offres_de_stage");
+})->name("offres_de_stage")->middleware('checkIdentifier');
 
 Route::get('/pilote', function () {
     return view('piloteMain');
-})->name("piloteMain");
+})->name("piloteMain")->middleware('checkIdentifier');
 
 Route::get('/mesdonnees', function () {
     return view('modifier_Donnees_Personelles');
-})->name("mesdonnees");
+})->name("mesdonnees")->middleware('checkIdentifier');
 
-Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification");
-Route::get('/inscription', [UtilisateurController::class, 'register'])->name("inscription");
-Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");
+Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification")->middleware('dejaIdentifier');
+Route::get('/inscription', [UtilisateurController::class, 'register'])->name("inscription")->middleware('dejaIdentifier');
+Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");//sans vue
+Route::post('/verification',[UtilisateurController::class, 'check'])->name("verifUtilisateur");//sans vue
+Route::post('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur");//sans vue

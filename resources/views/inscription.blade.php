@@ -19,9 +19,9 @@
                             <form action="{{ route('creeUtilisateur')}}" method="post">
                             @csrf
                                 <div class="results">
-                                    @if(Session::get('Success'))
+                                    @if(Session::get('success'))
                                         <div class="alert alert-success">
-                                            {{ Session::get('Success') }}
+                                            {{ Session::get('success') }}
                                         </div>
                                     @endif
                                     @if(Session::get('fail'))
