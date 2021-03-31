@@ -68,14 +68,14 @@ class Offre_de_stageController extends Controller
             
             case 'search':
                 
-                $stage = Offre_de_stage::where('nom_entreprise', $nom_entreprise)
+                /*$stage = Offre_de_stage::where('nom_entreprise', $nom_entreprise)
                 ->orWhere('domaine_entreprise', $domaine_entreprise)
                 ->orWhere('mail_entreprise', $mail_entreprise)
                 ->orWhere('nombre_stagiaire_entreprise', $nombre_stagiaire_entreprise)
                 ->orWhere('confiance_entreprise', $confiance_entreprise)
                 ->orWhere('zipcode_entreprise', $zipcode_entreprise)
                 ->orWhere('pays_entreprise', $pays_entreprise)
-                ->orWhere('adresse_entreprise', $adresse_entreprise)->get();
+                ->orWhere('adresse_entreprise', $adresse_entreprise)->get();*/
                 break;
     
             case 'update':
