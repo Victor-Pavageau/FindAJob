@@ -36,31 +36,28 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Nom</span>
+                                    <input type="text" class="form-control" placeholder="Nom du pilote" name="Nom">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Nom du pilote" aria-label="Nom"
-                                    aria-describedby="basic-addon1">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Prénom</span>
+                                    <input type="text" class="form-control" placeholder="Prénom du pilote" name="Prenom">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Prénom du pilote" aria-label="Nom"
-                                    aria-describedby="basic-addon1">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Centre</span>
+                                    <input type="text" class="form-control" placeholder="Centre de formation du pilote" name="Centre">
                                 </div>
-                                <input type="text" class="form-control" placeholder="Centre de formation du pilote"
-                                    aria-label="Nom d'utilisateur" aria-describedby="basic-addon1">
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Adresse Mail</span>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="E_mail">
                                 </div>
                             </div>
                         </div>

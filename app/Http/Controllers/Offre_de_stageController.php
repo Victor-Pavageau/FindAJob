@@ -67,12 +67,12 @@ class Offre_de_stageController extends Controller
             
             case 'search':
 
-                $stage = Offre_de_stage::where('intitule', $offre_de_stage->intitule)
-                ->orWhere('duree_du_stage', $offre_de_stage->duree_du_stage)
-                ->orWhere('base_de_remuneration', $offre_de_stage->base_de_remuneration)
-                ->orWhere('date_du_stage', $offre_de_stage->date_du_stage)
-                ->orWhere('nombre_de_places', $offre_de_stage->nombre_de_places)
-                ->orWhere('id_entreprise', $offre_de_stage->id_entreprise)->get();
+                $stage = Offre_de_stage::where('intitule', $request->intitule)
+                ->orWhere('duree_du_stage', $request->duree_du_stage)
+                ->orWhere('base_de_remuneration', $request->base_de_remuneration)
+                ->orWhere('date_du_stage', $request->date_du_stage)
+                ->orWhere('nombre_de_places', $request->nombre_de_places)
+                ->orWhere('id_entreprise', $request->id_entreprise)->get();
                 break;
     
             case 'update':

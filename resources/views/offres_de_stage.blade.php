@@ -68,7 +68,7 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Nombre de places</span>
-                                    <input type="text" class="form-control" name="nombre_de_places">
+                                    <input type="text" class="form-control" value="1" name="nombre_de_places">
                                 </div>
                             </div>
                         </form>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\cr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProfileController extends Controller
 {
@@ -35,22 +36,11 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
+
+
         switch ($request->input('action')) {
 
             case 'update':
-
-                /*$infos_profile = [
-                    $nom = request('nom'),
-                    $prenom = request('prenom'),
-                    $mail = request('mail'),
-                    $centre = request('centre'),
-                    $password = request('password'),
-                ];
-
-                
-
-                echo 'Profil modifié';
-                echo "<script> history.go(-1); </script>";*/
                 dd("ca marche pour l'update");
                 break;
             

@@ -37,16 +37,15 @@ class EntrepriseController extends Controller
      */
     public function store(Request $request)
     {
-        $infos_entreprise = [
-            $nom_entreprise = request('nom_entreprise'),
-            $domaine_entreprise = request('domaine_entreprise'),
-            $mail_entreprise = request('mail_entreprise'),
-            $nombre_stagiaire_entreprise = request('nombre_stagiaire_entreprise'),
-            $confiance_entreprise = request('confiance_entreprise'),
-            $zipcode_entreprise = request('zipcode_entreprise'),
-            $pays_entreprise = request('pays_entreprise'),
-            $adresse_entreprise = request('adresse_entreprise'),
-        ];
+        $entreprise = new Entreprise;
+        $entreprise->nom_entreprise=$request->nom_entreprise;
+        $entreprise->domaine_entreprise=$request->domaine_entreprise;
+        $entreprise->mail_entreprise=$request->mail_entreprise;
+        $entreprise->nombre_stagiaire_entreprise=$request->nombre_stagiaire_entreprise;
+        $entreprise->confiance_entreprise=$request->confiance_entreprise;
+        $entreprise->zipcode_entreprise=$request->zipcode_entreprise;
+        $entreprise->pays_entreprise=$request->pays_entreprise;
+        $entreprise->adresse_entreprise=$request->adresse_entreprise;
             
         switch ($request->input('action')) {
             
@@ -61,17 +60,8 @@ class EntrepriseController extends Controller
                     'zipcode_entreprise'=> 'required',
                     'pays_entreprise'=> 'required',
                     'adresse_entreprise'=> 'required',
-        
                 ]);
-                $entreprise = new Entreprise;
-                $entreprise->nom_entreprise=$request->nom_entreprise;
-                $entreprise->domaine_entreprise=$request->domaine_entreprise;
-                $entreprise->mail_entreprise=$request->mail_entreprise;
-                $entreprise->nombre_stagiaire_entreprise=$request->nombre_stagiaire_entreprise;
-                $entreprise->confiance_entreprise=$request->confiance_entreprise;
-                $entreprise->zipcode_entreprise=$request->zipcode_entreprise;
-                $entreprise->pays_entreprise=$request->pays_entreprise;
-                $entreprise->adresse_entreprise=$request->adresse_entreprise;
+                
                 $query=$entreprise->save();
 
                 echo 'Entreprise ajoutée';
@@ -87,14 +77,14 @@ class EntrepriseController extends Controller
                 break;
 
             case 'search':
-                $entreprise = Entreprise::where('nom_entreprise', $nom_entreprise)
-                ->orWhere('domaine_entreprise', $domaine_entreprise)
-                ->orWhere('mail_entreprise', $mail_entreprise)
-                ->orWhere('nombre_stagiaire_entreprise', $nombre_stagiaire_entreprise)
-                ->orWhere('confiance_entreprise', $confiance_entreprise)
-                ->orWhere('zipcode_entreprise', $zipcode_entreprise)
-                ->orWhere('pays_entreprise', $pays_entreprise)
-                ->orWhere('adresse_entreprise', $adresse_entreprise)->get();
+                $entreprise = Entreprise::where('nom_entreprise', $request->nom_entreprise)
+                ->orWhere('domaine_entreprise', $request->domaine_entreprise)
+                ->orWhere('mail_entreprise', $request->mail_entreprise)
+                ->orWhere('nombre_stagiaire_entreprise', $request->nombre_stagiaire_entreprise)
+                ->orWhere('confiance_entreprise', $request->confiance_entreprise)
+                ->orWhere('zipcode_entreprise', $request->zipcode_entreprise)
+                ->orWhere('pays_entreprise', $request->pays_entreprise)
+                ->orWhere('adresse_entreprise', $request->adresse_entreprise)->get();
             break;
 
             case 'delete':

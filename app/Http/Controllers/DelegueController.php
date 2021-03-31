@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cr;
+use App\Models\cr; 
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DelegueController extends Controller
 {
@@ -35,14 +37,19 @@ class DelegueController extends Controller
      */
     public function store(Request $request)
     {
+        $delegue = new Utilisateur;
+        $delegue->Nom=$request->Nom;
+        $delegue->Prenom=$request->Prenom;
+        $delegue->Centre=$request->Centre;
+        $delegue->E_mail=$request->E_mail;
 
         switch ($request->input('action')) {
             
             case 'search':
-                $delegues = Utilisateur::where('Nom', $Nom)
-                ->orWhere('Prenom', $Prenom)
-                ->orWhere('Centre', $Centre)
-                ->orWhere('E_mail', $E_mail)->get();
+                $delegues = Utilisateur::where('Nom', $request->Nom)
+                ->orWhere('Prenom', $request->Prenom)
+                ->orWhere('Centre', $request->Centre)
+                ->orWhere('E_mail', $request->E_mail)->get();
                 break;
     
             case 'update':

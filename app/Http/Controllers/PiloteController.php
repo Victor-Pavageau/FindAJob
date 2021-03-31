@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\cr;
+use App\Models\Utilisateur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PiloteController extends Controller
 {
@@ -35,10 +37,19 @@ class PiloteController extends Controller
      */
     public function store(Request $request)
     {
+        $pilote = new Utilisateur;
+        $pilote->Nom=$request->Nom;
+        $pilote->Prenom=$request->Prenom;
+        $pilote->Centre=$request->Centre;
+        $pilote->E_mail=$request->E_mail;
+
         switch ($request->input('action')) {
             
             case 'search':
-                dd("ca marche pour le search");
+                $pilote = Utilisateur::where('Nom', $request->Nom)
+                ->orWhere('Prenom', $request->Prenom)
+                ->orWhere('Centre', $request->Centre)
+                ->orWhere('E_mail', $request->E_mail)->get();
                 break;
     
             case 'update':

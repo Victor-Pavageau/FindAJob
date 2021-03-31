@@ -17,39 +17,57 @@
             </div>
             <div id="bloc1">
                 <h2>Rechercher une offre :</h2>
-                    <form action="" method="post">
-                        @csrf
-                        <div>
-                            <select class="niveau" name="niveau">
-                                <option>--Choisissez votre niveau--</option>
-                                <option id="N1">A2</option>
-                                <option id="N2">A3</option>
-                                <option id="N3">A4</option>
-                                <option id="N4">A5</option>
-                            </select>
-                            <select class="niveau" name="domaine">
-                                <option>--Choisissez votre domaine--</option>
-                                <option id="D1">Systèmes/Réseaux</option>
-                                <option id="D2">Développement web</option>
-                                <option id="D3">Gestion de données</option>
-                                <option id="D4">Développement logiciel</option>
-                                <option id="D5">Systèmes embarqués</option>
-                            </select>
-                            <button value="search"  name="action" type="submit" class="btn blue">Rechercher</button>
+                <form action="" method="post">
+                    @csrf
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >Intitulé</span>
+                            <input type="text" class="form-control" name="intitule">
                         </div>
-                    </form>
-                    <br>
-                <div class="offre">
-                </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" >Nom Entreprise</span>
+                            <input type="text" class="form-control" name="nom_entreprise">
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Durée du stage</span>
+                            <input type="text" class="form-control" placeholder="ex : 6 mois" name="duree_du_stage">
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Base de rémunération</span>
+                            <input type="text" class="form-control" placeholder="ex : 2000€" name="base_de_remuneration">
+                        </div>                            
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Date du stage</span>
+                            <input type="Date" class="form-control" placeholder="Numéro de téléphone" name="date_du_stage">
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Nombre de places</span>
+                            <input type="text" class="form-control" name="nombre_de_places">
+                        </div>
+                    </div>
+                    <button value="search"  name="action" type="submit" class="btn blue">Rechercher</button>
+                </form>
+                <br>
             </div>
             
             <div id="bloc2">
                 <h2>Ma wishlist :</h2>
-                <div>
-                    <form class="Recherche">
-                    </form>
-                </div>
-                <div class="offre">		
+                <div style="overflow:auto; border:#000000 1px solid; max-width: 500px; min-height: 100px; max-height: 350px; height: auto;">
                 </div>	
             </div>
         </main>
