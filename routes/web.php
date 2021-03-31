@@ -35,6 +35,11 @@ Route::post('offres_de_stage', [Offre_de_stageController::class, "store"])->midd
 Route::post('mesdonnees', [ProfileController::class, "store"])->middleware('checkIdentifier');
 Route::post('wishlist', [WishlistController::class, "store"])->middleware('checkIdentifier');
 
+Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification")->middleware('dejaIdentifier');
+Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");//sans vue
+Route::post('/verification',[UtilisateurController::class, 'check'])->name("verifUtilisateur");//sans vue
+Route::get('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur");//sans vue
+Route::post('/modifierUtilisateur',[UtilisateurController::class, 'modify'])->name("modifierUtilisateur");//sans vue
 
 Route::get('/', function () {
     return view('index');
@@ -48,9 +53,9 @@ Route::get('/inscription', function () {
     return view('inscription');
 })->name("inscription")->middleware('dejaIdentifier');;
 
-Route::get('/mescandidatures', function () {
-    return view('mescandidatures');
-})->name("mescandidatures")->middleware('checkIdentifier');
+Route::get('/candidatures', function () {
+    return view('candidatures');
+})->name("candidatures")->middleware('checkIdentifier');
 
 Route::get('/wishlist', function () {
     return view('wishlist');
@@ -83,11 +88,6 @@ Route::get('/pilote', function () {
 Route::get('/mesdonnees', function () {
     return view('modifier_Donnees_Personelles');
 })->name("mesdonnees")->middleware('checkIdentifier');
-
-Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification")->middleware('dejaIdentifier');
-Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");//sans vue
-Route::post('/verification',[UtilisateurController::class, 'check'])->name("verifUtilisateur");//sans vue
-Route::get('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur");//sans vue
 
 Route::get('/email', function () {
     Mail::to('guillaume.rouvin@viacesi.fr')->send(new WelcomeMail());
