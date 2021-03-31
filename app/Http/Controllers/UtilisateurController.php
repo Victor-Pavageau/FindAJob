@@ -73,8 +73,7 @@ class UtilisateurController extends Controller
 
     function logout(){
         if(Cookie::get('utilisateur')){
-            Cookie::forget('utilisateur');
-            redirect('identification');
+            return redirect('identification')->withCookie(Cookie::forget('utilisateur'));
         }
     }
 }
