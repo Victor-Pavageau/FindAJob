@@ -14,15 +14,6 @@ class CreateForeignKeys extends Migration
     public function up()
     {
 
-        Schema::table('candidature', function (Blueprint $table) {
-            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-        });
-
         Schema::table('interesser', function (Blueprint $table) {
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
                 ->onDelete('restrict')

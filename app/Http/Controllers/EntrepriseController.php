@@ -91,13 +91,7 @@ class EntrepriseController extends Controller
 
             case 'delete':
                 $entreprise = Entreprise::where('nom_entreprise', $request->nom_entreprise)
-                ->orWhere('domaine_entreprise', $request->domaine_entreprise)
-                ->orWhere('mail_entreprise', $request->mail_entreprise)
-                ->orWhere('nombre_stagiaire_entreprise', $request->nombre_stagiaire_entreprise)
-                ->orWhere('confiance_entreprise', $request->confiance_entreprise)
-                ->orWhere('zipcode_entreprise', $request->zipcode_entreprise)
-                ->orWhere('pays_entreprise', $request->pays_entreprise)
-                ->orWhere('adresse_entreprise', $request->adresse_entreprise)->first()->delete();
+                ->orWhere('mail_entreprise', $request->mail_entreprise)->first()->delete();
 
                 echo 'Entreprise supprimée';
                 echo "<script> history.go(-1); </script>";

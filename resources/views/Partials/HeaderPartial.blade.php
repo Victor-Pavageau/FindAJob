@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light" style="background-color: #fff;">
     <a class="navbar-brand" href="{{route('home')}}">
         <img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
-        <p class="d-inline-block align-bottom" alt="">Trouve 1 Job</p>
+        <p class="d-inline-block align-bottom" alt="">Trouve 1 Stage</p>
     </a>
     <nav class="float-right">
         @if(!Cookie::get('utilisateur'))
