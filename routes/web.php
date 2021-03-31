@@ -55,7 +55,7 @@ Route::get('/inscription', function () {
 
 Route::get('/candidatures', function () {
     return view('candidatures');
-})->name("candidatures")->middleware('checkIdentifier');
+})->name("mescandidatures")->middleware('checkIdentifier');
 
 Route::get('/wishlist', function () {
     return view('wishlist');
