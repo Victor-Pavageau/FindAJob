@@ -9,11 +9,8 @@
         <a href="{{route('identification')}}"><button class="float-right btn btn-outline-success mr-sm-4" >Se connecter</button></a>
         @else
         <ul id="menu-deroulant">
-	        <li><span style="color:black"class="my-2 my-sm-0"> Bonjour, {{ json_decode(Cookie::get('utilisateur'))->Prenom }} !</span>
-	        	<ul>
-	            	<li><a href="{{route('deconnecteUtilisateur')}}">Déconnexion</a></li>
-	        	</ul>
-	        </li>
+	        <span class="Bonjour" class="my-2 my-sm-0"> Bonjour {{ json_decode(Cookie::get('utilisateur'))->Prenom }}</span>
+	           <br><a class="couleurouge" href="{{route('deconnecteUtilisateur')}}">Déconnexion</a>
 	    </ul>
         @endif
     </nav>
