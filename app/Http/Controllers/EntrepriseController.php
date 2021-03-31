@@ -46,6 +46,7 @@ class EntrepriseController extends Controller
         $entreprise->zipcode_entreprise=$request->zipcode_entreprise;
         $entreprise->pays_entreprise=$request->pays_entreprise;
         $entreprise->adresse_entreprise=$request->adresse_entreprise;
+        
             
         switch ($request->input('action')) {
             
@@ -85,10 +86,15 @@ class EntrepriseController extends Controller
                 ->orWhere('zipcode_entreprise', $request->zipcode_entreprise)
                 ->orWhere('pays_entreprise', $request->pays_entreprise)
                 ->orWhere('adresse_entreprise', $request->adresse_entreprise)->get();
+
             break;
 
             case 'delete':
-            dd("ca marche pour le delete");
+                $entreprise = Entreprise::where('nom_entreprise', $request->nom_entreprise)
+                ->orWhere('mail_entreprise', $request->mail_entreprise)->first()->delete();
+
+                echo 'Entreprise supprimée';
+                echo "<script> history.go(-1); </script>";
             break;
         }
     }

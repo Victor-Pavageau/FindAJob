@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppartenir extends Migration
+class CreateWishlist extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateAppartenir extends Migration
      */
     public function up()
     {
-        Schema::create('appartenir', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('wishlist', function (Blueprint $table) {
             $table->integer('id_utilisateur')->unsigned();
-            $table->integer('id_promotion')->unsigned();
+            $table->integer('id_offre_de_stage')->unsigned();
             $table->timestamps();
             
         });
@@ -29,6 +28,6 @@ class CreateAppartenir extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('appartenir');
+        Schema::dropIfExists('interesser');
     }
 }

@@ -57,7 +57,13 @@ class DelegueController extends Controller
                 break;
 
             case 'delete':
-                dd("ca marche pour le delete");
+                $delegues = Utilisateur::where('Nom', $request->Nom)
+                ->orWhere('Prenom', $request->Prenom)
+                ->orWhere('Centre', $request->Centre)
+                ->orWhere('E_mail', $request->E_mail)->first()->delete();
+
+                echo 'Compte délégué supprimé';
+                echo "<script> history.go(-1); </script>";
                 break;
         }
     }
@@ -107,3 +113,5 @@ class DelegueController extends Controller
         //
     }
 }
+
+?>

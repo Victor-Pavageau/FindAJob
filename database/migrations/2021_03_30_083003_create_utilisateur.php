@@ -25,9 +25,7 @@ class CreateUtilisateur extends Migration
             $table->string('E_mail');
             $table->timestamps();
             $table->integer('id_promotion')->unsigned();
-            $table->foreign('id_promotion')->references('id')->on('promotion')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+            
 
         });
     }

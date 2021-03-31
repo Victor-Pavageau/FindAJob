@@ -50,14 +50,26 @@ class WishlistController extends Controller
             
             case 'search':
 
-                dd($wishlist = Offre_de_stage::where('intitule', $request->intitule)
+                $wishlist = Offre_de_stage::where('intitule', $request->intitule)
                 ->orWhere('duree_du_stage', $request->duree_du_stage)
                 ->orWhere('base_de_remuneration', $request->base_de_remuneration)
                 ->orWhere('date_du_stage', $request->date_du_stage)
                 ->orWhere('nombre_de_places', $request->nombre_de_places)
-                ->orWhere('id_entreprise', $request->id_entreprise)->get());
+                ->orWhere('id_entreprise', $request->id_entreprise)->get();
                 break;
 
+            case 'delete':
+
+                $wishlist = Offre_de_stage::where('intitule', $request->intitule)
+                ->orWhere('duree_du_stage', $request->duree_du_stage)
+                ->orWhere('base_de_remuneration', $request->base_de_remuneration)
+                ->orWhere('date_du_stage', $request->date_du_stage)
+                ->orWhere('nombre_de_places', $request->nombre_de_places)
+                ->orWhere('id_entreprise', $request->id_entreprise)->first()->delete();
+
+                echo 'Offre de stage supprimée';
+                echo "<script> history.go(-1); </script>";
+                break;
         }
         
     }
@@ -107,3 +119,5 @@ class WishlistController extends Controller
         //
     }
 }
+
+?>

@@ -97,14 +97,27 @@
 							<div class="col">
 								<button value="search" name="action" type="submit" class="btn purple">Rechercher l'entreprise</button>
 							</div>
+							<br><br>
+
 						</div>
 					</form>
                 </div>
 
                 <div class="col">
                     <h2>Consulter les entreprises.</h2>
-                    <div style="overflow:auto; border:#000000 1px solid; max-width: 500px; min-height: 100px; max-height: 350px; height: auto;">
-                        
+                    <div style="overflow:auto; border:#000000 1px solid; min-height: 100px; max-height: 350px; height: auto;">
+						@foreach (DB::table('entreprise')->get() as $entreprise) 
+							<div class="col">
+								<fieldset>
+									<legend class="d-flex justify-content-center" style="background-color: #000; color: #fff;">{{ $entreprise->nom_entreprise}}</legend>
+									<label> - Domaine de l'entreprise : {{ $entreprise->domaine_entreprise}} </label><br>
+									<label> - Adresse mail de l'entreprise {{ $entreprise->mail_entreprise}} </label><br>
+									<label> - Note de confiance de l'entreprise {{ $entreprise->confiance_entreprise}}/10 </label><br>
+									<label> - Adresse de l'entreprise : {{ $entreprise->adresse_entreprise}},</label> <label> {{ $entreprise->zipcode_entreprise}} -</label> <label> {{ $entreprise->pays_entreprise}} </label><br>
+									<label> - Nombre de Stagiaire : {{ $entreprise->nombre_stagiaire_entreprise}} </label><br>
+								</fieldset> <br><br>
+							</div>
+						@endforeach
                     </div>
                 </div>
             </div>

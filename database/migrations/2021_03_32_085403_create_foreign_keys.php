@@ -13,9 +13,17 @@ class CreateForeignKeys extends Migration
      */
     public function up()
     {
-
-
-        Schema::table('interesser', function (Blueprint $table) {
+        Schema::table('offre_de_stage', function (Blueprint $table) {
+            $table->foreign('id_entreprise')->references('id')->on('entreprise')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+        });
+        Schema::table('utilisateur', function (Blueprint $table) {
+            $table->foreign('id_promotion')->references('id')->on('promotion')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+        });
+        Schema::table('wishlist', function (Blueprint $table) {
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
@@ -23,6 +31,15 @@ class CreateForeignKeys extends Migration
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
         });
+        Schema::table('respecter', function (Blueprint $table) {
+            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->foreign('id_droit')->references('id')->on('droit')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+        });
+        
 
         Schema::table('posseder', function (Blueprint $table) {
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
@@ -50,8 +67,18 @@ class CreateForeignKeys extends Migration
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
         });
+
         Schema::table('notes', function (Blueprint $table) {
         $table->foreign('id_entreprise')->references('id')->on('entreprise')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+        });
+
+        Schema::table('donner', function (Blueprint $table) {
+            $table->foreign('id_notes')->references('id')->on('notes')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+                $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
         });
