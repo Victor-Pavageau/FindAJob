@@ -50,8 +50,7 @@ class DatabaseSeeder extends Seeder
             ]);
 
         \App\Models\Candidature::create( [
-            'Date' => '1000-01-01',
-            'Statut' => '10',
+            'Statut' => '0',
             'id_offre_de_stage' => '1',
             'id_utilisateur' => '1',
             ]);
