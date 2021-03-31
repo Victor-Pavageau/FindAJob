@@ -61,6 +61,9 @@ class PiloteController extends Controller
                 ->orWhere('Prenom', $request->Prenom)
                 ->orWhere('Centre', $request->Centre)
                 ->orWhere('E_mail', $request->E_mail)->first()->delete();
+
+                echo 'Compte pilote supprimé';
+                echo "<script> history.go(-1); </script>";
                 break;
         }
     }
@@ -110,3 +113,5 @@ class PiloteController extends Controller
         //
     }
 }
+
+?>

@@ -66,6 +66,9 @@ class WishlistController extends Controller
                 ->orWhere('date_du_stage', $request->date_du_stage)
                 ->orWhere('nombre_de_places', $request->nombre_de_places)
                 ->orWhere('id_entreprise', $request->id_entreprise)->first()->delete();
+
+                echo 'Offre de stage supprimée';
+                echo "<script> history.go(-1); </script>";
                 break;
         }
         
@@ -116,3 +119,5 @@ class WishlistController extends Controller
         //
     }
 }
+
+?>
