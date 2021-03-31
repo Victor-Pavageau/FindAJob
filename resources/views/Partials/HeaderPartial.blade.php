@@ -8,7 +8,13 @@
         <a href="{{route('inscription')}}"><button class="float-right btn btn-outline-success my-2 my-sm-0">S'inscrire</button></a>
         <a href="{{route('identification')}}"><button class="float-right btn btn-outline-success mr-sm-4" >Se connecter</button></a>
         @else
-        <span style="color:black"class="my-2 my-sm-0"> Bonjour, {{ json_decode(Cookie::get('utilisateur'))->Prenom }} !</span>
+        <ul id="menu-deroulant">
+	        <li><span style="color:black"class="my-2 my-sm-0"> Bonjour, {{ json_decode(Cookie::get('utilisateur'))->Prenom }} !</span>
+	        	<ul>
+	            	<li><a href="{{route('deconnecteUtilisateur')}}">Déconnexion</a></li>
+	        	</ul>
+	        </li>
+	    </ul>
         @endif
     </nav>
 </nav>

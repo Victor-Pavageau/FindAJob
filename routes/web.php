@@ -83,4 +83,4 @@ Route::get('/mesdonnees', function () {
 Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification")->middleware('dejaIdentifier');
 Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");//sans vue
 Route::post('/verification',[UtilisateurController::class, 'check'])->name("verifUtilisateur");//sans vue
-Route::post('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur");//sans vue
+Route::get('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur");//sans vue
