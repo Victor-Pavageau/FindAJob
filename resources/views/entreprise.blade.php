@@ -97,6 +97,8 @@
 							<div class="col">
 								<button value="search" name="action" type="submit" class="btn purple">Rechercher l'entreprise</button>
 							</div>
+							
+
 						</div>
 					</form>
                 </div>

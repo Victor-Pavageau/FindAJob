@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('MAIL_MAILER', 'smtp'),
+    'default' => env('MAIL_MAILER', 'sendmail'),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,6 +70,7 @@ return [
         'array' => [
             'transport' => 'array',
         ],
+        
     ],
 
     /*

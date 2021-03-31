@@ -12,6 +12,9 @@ use App\Http\Controllers\UtilisateurController;
 use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
 
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -84,3 +87,9 @@ Route::get('/identification', [UtilisateurController::class, 'login'])->name("id
 Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");//sans vue
 Route::post('/verification',[UtilisateurController::class, 'check'])->name("verifUtilisateur");//sans vue
 Route::get('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur");//sans vue
+
+Route::get('/email', function () {
+    Mail::to('guillaume.rouvin@viacesi.fr')->send(new WelcomeMail());
+    return new WelcomeMail();
+});
+
