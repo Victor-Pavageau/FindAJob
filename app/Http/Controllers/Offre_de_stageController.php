@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\cr;
+use App\Models\Entreprise;
 use App\Models\Offre_de_stage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Offre_de_stageController extends Controller
 {
@@ -39,14 +41,14 @@ class Offre_de_stageController extends Controller
         switch ($request->input('action')) {
 
             case 'add':
-
+                $entreprise = new Entreprise;
                 $infos_stage = [
                     $intitule = request('intitule'),
                     $duree_du_stage = request('duree_du_stage'),
                     $base_de_remuneration = request('base_de_remuneration'),
                     $date_du_stage = request('date_du_stage'),
                     $nombre_de_places = request('nombre_de_places'),
-                    $id_entreprise = request('id_entreprise'),
+                    $entreprise = DB::table('entreprise')->where('nom_entreprise', $request->Entreprise)->value('id'),
                     Offre_de_stage::create($request->all())
                 ];
 
