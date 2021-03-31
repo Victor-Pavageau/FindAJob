@@ -117,16 +117,14 @@
 								<fieldset>
 									<legend class="d-flex justify-content-center" style="background-color: #000; color: #fff;">{{ $entreprise->nom_entreprise}}</legend>
 									<label> - Domaine de l'entreprise : {{ $entreprise->domaine_entreprise}} </label><br>
-									<label> - Adresse mail de l'entreprise {{ $entreprise->mail_entreprise}} </label><br>
-									<label> - Note de confiance de l'entreprise {{ $entreprise->confiance_entreprise}}/10 </label><br>
+									<label> - Adresse mail de l'entreprise : {{ $entreprise->mail_entreprise}} </label><br>
+									<label> - Note de confiance de l'entreprise : {{ $entreprise->confiance_entreprise}}/10 </label><br>
 									<label> - Adresse de l'entreprise : {{ $entreprise->adresse_entreprise}},</label> <label> {{ $entreprise->zipcode_entreprise}} -</label> <label> {{ $entreprise->pays_entreprise}} </label><br>
 									<label> - Nombre de Stagiaire : {{ $entreprise->nombre_stagiaire_entreprise}} </label><br>
 								</fieldset> <br><br>
 							</div>
 						@endforeach
                     </div>
-
-					
                 </div>
             </div>
         </div>
