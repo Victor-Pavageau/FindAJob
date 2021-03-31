@@ -86,8 +86,8 @@
                                             @csrf
                                             <button value="postuler" name="action" type="submit" class="btn blue float-right">Postuler pour cette Offre</button>
                                             <button value="wish" name="action" type="submit" class="btn yellow float-right"><i class="fas fa-star"></i></button>
-                                            <input type="text" class="form-control" name="id_utilisateur_cookie" value="{{ json_decode(Cookie::get('utilisateur'))->Prenom }}">
-                                            <input type="hidden" class="form-control" name="id_offre_de_stage">
+                                            <input type="hidden" class="form-control" name="id_utilisateur_cookie" value="{{ json_decode(Cookie::get('utilisateur'))->id}}">
+                                            <input type="hidden" class="form-control" name="id_offre_de_stage" value="{{ $offre_de_stage->id}}">
                                         </form>
                                         <label class="d-flex justify-content-center">{{ $offre_de_stage->intitule}}</label>
                                     </legend>
