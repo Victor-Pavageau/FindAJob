@@ -21,6 +21,9 @@ class CreateOffreDeStage extends Migration
             $table->date('date_du_stage');
             $table->string('nombre_de_places');
             $table->integer('id_entreprise')->unsigned();
+            $table->foreign('id_entreprise')->references('id')->on('entreprise')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->timestamps();
             
 

@@ -39,6 +39,13 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
+                                    <span class="input-group-text" >Nom Entreprise</span>
+                                    <input type="text" class="form-control" name="nom_entreprise">
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
                                     <span class="input-group-text">Durée du stage</span>
                                     <input type="text" class="form-control" placeholder="ex : 6 mois" name="duree_du_stage">
                                 </div>

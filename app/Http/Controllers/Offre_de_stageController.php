@@ -25,7 +25,7 @@ class Offre_de_stageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
     }
@@ -38,28 +38,44 @@ class Offre_de_stageController extends Controller
      */
     public function store(Request $request)
     {
+
         switch ($request->input('action')) {
 
             case 'add':
-                $entreprise = new Entreprise;
-                $infos_stage = [
-                    $intitule = request('intitule'),
-                    $duree_du_stage = request('duree_du_stage'),
-                    $base_de_remuneration = request('base_de_remuneration'),
-                    $date_du_stage = request('date_du_stage'),
-                    $nombre_de_places = request('nombre_de_places'),
-                    $entreprise = DB::table('entreprise')->where('nom_entreprise', $request->Entreprise)->value('id'),
-                    Offre_de_stage::create($request->all())
-                ];
 
-                
+                $request->validate([
+                    'intitule' => 'required',
+                    'nom_entreprise' => 'required',
+                    'duree_du_stage' => 'required',
+                    'base_de_remuneration' => 'required',
+                    'date_du_stage' => 'required',
+                    'nombre_de_places'=> 'required',
+        
+                ]);
+        
+                $offre_de_stage = new Offre_de_stage;
+                $offre_de_stage->intitule=$request->intitule;
+                $offre_de_stage->duree_du_stage=$request->duree_du_stage;
+                $offre_de_stage->base_de_remuneration=$request->base_de_remuneration;
+                $offre_de_stage->date_du_stage=$request->date_du_stage;
+                $offre_de_stage->nombre_de_places=$request->nombre_de_places;
+                $offre_de_stage->id_entreprise = DB::table('entreprise')->where('nom_entreprise', $request->nom_entreprise)->value("id");
+                $query=$offre_de_stage->save();
 
                 echo 'Offre de stage ajoutée';
                 echo "<script> history.go(-1); </script>";
                 break;
             
             case 'search':
-                dd("ca marche pour le search");
+                
+                $stage = Offre_de_stage::where('nom_entreprise', $nom_entreprise)
+                ->orWhere('domaine_entreprise', $domaine_entreprise)
+                ->orWhere('mail_entreprise', $mail_entreprise)
+                ->orWhere('nombre_stagiaire_entreprise', $nombre_stagiaire_entreprise)
+                ->orWhere('confiance_entreprise', $confiance_entreprise)
+                ->orWhere('zipcode_entreprise', $zipcode_entreprise)
+                ->orWhere('pays_entreprise', $pays_entreprise)
+                ->orWhere('adresse_entreprise', $adresse_entreprise)->get();
                 break;
     
             case 'update':
