@@ -15,13 +15,7 @@ class CreateDonner extends Migration
     {
         Schema::create('donner', function (Blueprint $table) {
             $table->integer('id_utilisateur')->unsigned();
-            $table->integer('id_entreprise')->unsigned();
-            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_entreprise')->references('id')->on('entreprise')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
+            $table->integer('id_notes')->unsigned();
             $table->timestamps();
         });
     }
