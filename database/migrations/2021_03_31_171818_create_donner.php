@@ -16,7 +16,6 @@ class CreateDonner extends Migration
         Schema::create('donner', function (Blueprint $table) {
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_notes')->unsigned();
-            
             $table->timestamps();
         });
     }

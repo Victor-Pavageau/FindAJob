@@ -38,7 +38,6 @@ class CandidatureController extends Controller
     public function store(Request $request)
     {
         $candidature = new Candidature;
-        $candidature->Date = date('Y-m-d H:i:s');
         $candidature->Statut = 0;
         $candidature->id_offre_de_stage = DB::table('offre_de_stage')->where('intitule', $request->intitule)->value('id');
         $candidature->id_utilisateur = DB::table('utilisateur')->where('Nom', $request->Nom)->value('id');
