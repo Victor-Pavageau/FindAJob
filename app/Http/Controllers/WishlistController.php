@@ -46,7 +46,8 @@ class WishlistController extends Controller
         switch ($request->input('action')) {
             
             case 'postuler':
-
+                echo 'Vous avez postulé à cette offre de stage';
+                echo "<script> history.go(-1); </script>";
                 break;
 
             case 'wish':
