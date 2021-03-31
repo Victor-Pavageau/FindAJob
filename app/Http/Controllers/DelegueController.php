@@ -35,12 +35,6 @@ class DelegueController extends Controller
      */
     public function store(Request $request)
     {
-        $infos_delegue = [
-            $Nom = request('Nom'),
-            $Prenom = request('Prenom'),
-            $Centre = request('Centre'),
-            $E_mail = request('E_mail')
-        ];
 
         switch ($request->input('action')) {
             

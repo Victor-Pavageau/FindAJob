@@ -38,7 +38,6 @@ class CandidatureController extends Controller
     public function store(Request $request)
     {
         
-        
         switch ($request->input('action')) {
             
             case 'add':
@@ -55,9 +54,6 @@ class CandidatureController extends Controller
                 $candidature->id_offre_de_stage = DB::table('offre_de_stage')->where('intitule', $request->Offre_de_stage)->value('id');
                 $candidature->id_utilisateur = DB::table('utilisateur')->where('Nom', $request->Utilisateur)->value('id');
                 $query = $candidature->save();
-        
-                
-                
                 
                 echo 'Candidature ajoutée';
                 echo "<script> history.go(-1); </script>";

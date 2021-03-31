@@ -56,7 +56,19 @@
 							<div class="input-group mb-3">
 								<div class="input-group-prepend">
 									<span class="input-group-text">Note de Confiance de l'entreprise</span>
-									<input type="text" class="form-control" placeholder="Note sur 10" name="confiance_entreprise">
+									<select class="form-control" placeholder="Note sur 10" name="confiance_entreprise">
+										<option> 0 </option>
+										<option> 1 </option>
+										<option> 2 </option>
+										<option> 3 </option>
+										<option> 4 </option>
+										<option> 5 </option>
+										<option> 6 </option>
+										<option> 7 </option>
+										<option> 8 </option>
+										<option> 9 </option>
+										<option> 10 </option>
+									</select>
 								</div>
 							</div>
 
