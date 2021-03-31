@@ -5,6 +5,6 @@
     </a>
     <nav class="float-right">
         <a href="{{route('inscription')}}"><button class="float-right btn btn-outline-success my-2 my-sm-0">S'inscrire</button></a>
-        <a href="{{route('login')}}"><button class="float-right btn btn-outline-success mr-sm-4" >Se connecter</button></a>
+        <a href="{{route('identification')}}"><button class="float-right btn btn-outline-success mr-sm-4" >Se connecter</button></a>
     </nav>
 </nav>
