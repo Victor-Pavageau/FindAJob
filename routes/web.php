@@ -35,6 +35,7 @@ Route::post('offres_de_stage', [Offre_de_stageController::class, "store"])->midd
 Route::post('mesdonnees', [ProfileController::class, "store"])->middleware('checkIdentifier');
 Route::post('wishlist', [WishlistController::class, "store"])->middleware('checkIdentifier');
 
+
 Route::get('/', function () {
     return view('index');
 })->name("home")->middleware('checkIdentifier');

@@ -97,17 +97,25 @@
 							<div class="col">
 								<button value="search" name="action" type="submit" class="btn purple">Rechercher l'entreprise</button>
 							</div>
-							
-
 						</div>
+							
+						<div>
+							<br>
+							<textarea id="email" class="btn-block"  placeholder="Entrez un mail"></textarea>
+							<br>
+							<a href ="{{route('identification')}}"><input type="subit" class="btn orange"  value="Envoyer le mail"></a>
+						</div>
+				
 					</form>
-                </div>
-
+							
+                </div>		
                 <div class="col">
                     <h2>Consulter les entreprises.</h2>
                     <div style="overflow:auto; border:#000000 1px solid; max-width: 500px; min-height: 100px; max-height: 350px; height: auto;">
 						{{ DB::table('entreprise')->get() }}
                     </div>
+
+					
                 </div>
             </div>
         </div>
