@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\cr;
 use App\Models\Offre_de_stage;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -38,34 +39,20 @@ class WishlistController extends Controller
     public function store(Request $request)
     {
 
-        $wishlist = new Offre_de_stage;
-        $wishlist->intitule=$request->intitule;
-        $wishlist->duree_du_stage=$request->duree_du_stage;
-        $wishlist->base_de_remuneration=$request->base_de_remuneration;
-        $wishlist->date_du_stage=$request->date_du_stage;
-        $wishlist->nombre_de_places=$request->nombre_de_places;
-        $wishlist->id_entreprise = DB::table('entreprise')->where('nom_entreprise', $request->nom_entreprise)->value("id");
+        $wishlist = new Wishlist();
+        $wishlist->id_offre_de_stage = DB::table('offre_de_stage')->where('intitule', $request->intitule)->value('id');
+        $wishlist->id_utilisateur = DB::table('utilisateur')->where('Nom', $request->Nom)->value('id');
         
         switch ($request->input('action')) {
             
-            case 'search':
+            case 'postuler':
 
-                $wishlist = Offre_de_stage::where('intitule', $request->intitule)
-                ->orWhere('duree_du_stage', $request->duree_du_stage)
-                ->orWhere('base_de_remuneration', $request->base_de_remuneration)
-                ->orWhere('date_du_stage', $request->date_du_stage)
-                ->orWhere('nombre_de_places', $request->nombre_de_places)
-                ->orWhere('id_entreprise', $request->id_entreprise)->get();
+                
                 break;
 
-            case 'delete':
+            case 'wish':
 
-                $wishlist = Offre_de_stage::where('intitule', $request->intitule)
-                ->orWhere('duree_du_stage', $request->duree_du_stage)
-                ->orWhere('base_de_remuneration', $request->base_de_remuneration)
-                ->orWhere('date_du_stage', $request->date_du_stage)
-                ->orWhere('nombre_de_places', $request->nombre_de_places)
-                ->orWhere('id_entreprise', $request->id_entreprise)->first()->delete();
+                
 
                 echo 'Offre de stage supprimée';
                 echo "<script> history.go(-1); </script>";
