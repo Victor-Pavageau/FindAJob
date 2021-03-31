@@ -38,7 +38,14 @@ class Offre_de_stageController extends Controller
      */
     public function store(Request $request)
     {
-
+        $offre_de_stage = new Offre_de_stage;
+        $offre_de_stage->intitule=$request->intitule;
+        $offre_de_stage->duree_du_stage=$request->duree_du_stage;
+        $offre_de_stage->base_de_remuneration=$request->base_de_remuneration;
+        $offre_de_stage->date_du_stage=$request->date_du_stage;
+        $offre_de_stage->nombre_de_places=$request->nombre_de_places;
+        $offre_de_stage->id_entreprise = DB::table('entreprise')->where('nom_entreprise', $request->nom_entreprise)->value("id");
+        
         switch ($request->input('action')) {
 
             case 'add':
@@ -50,16 +57,8 @@ class Offre_de_stageController extends Controller
                     'base_de_remuneration' => 'required',
                     'date_du_stage' => 'required',
                     'nombre_de_places'=> 'required',
-        
                 ]);
-        
-                $offre_de_stage = new Offre_de_stage;
-                $offre_de_stage->intitule=$request->intitule;
-                $offre_de_stage->duree_du_stage=$request->duree_du_stage;
-                $offre_de_stage->base_de_remuneration=$request->base_de_remuneration;
-                $offre_de_stage->date_du_stage=$request->date_du_stage;
-                $offre_de_stage->nombre_de_places=$request->nombre_de_places;
-                $offre_de_stage->id_entreprise = DB::table('entreprise')->where('nom_entreprise', $request->nom_entreprise)->value("id");
+
                 $query=$offre_de_stage->save();
 
                 echo 'Offre de stage ajoutée';
@@ -67,15 +66,13 @@ class Offre_de_stageController extends Controller
                 break;
             
             case 'search':
-                
-                /*$stage = Offre_de_stage::where('nom_entreprise', $nom_entreprise)
-                ->orWhere('domaine_entreprise', $domaine_entreprise)
-                ->orWhere('mail_entreprise', $mail_entreprise)
-                ->orWhere('nombre_stagiaire_entreprise', $nombre_stagiaire_entreprise)
-                ->orWhere('confiance_entreprise', $confiance_entreprise)
-                ->orWhere('zipcode_entreprise', $zipcode_entreprise)
-                ->orWhere('pays_entreprise', $pays_entreprise)
-                ->orWhere('adresse_entreprise', $adresse_entreprise)->get();*/
+                // var_dump($offre_de_stage->id_entreprise);
+                dd($stage = Offre_de_stage::where('intitule', $offre_de_stage->intitule)
+                ->orWhere('duree_du_stage', $offre_de_stage->duree_du_stage)
+                ->orWhere('base_de_remuneration', $offre_de_stage->base_de_remuneration)
+                ->orWhere('date_du_stage', $offre_de_stage->date_du_stage)
+                ->orWhere('nombre_de_places', $offre_de_stage->nombre_de_places)
+                ->orWhere('id_entreprise', $offre_de_stage->id_entreprise)->get());
                 break;
     
             case 'update':
