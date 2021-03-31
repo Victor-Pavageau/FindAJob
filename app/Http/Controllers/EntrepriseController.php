@@ -96,6 +96,9 @@ class EntrepriseController extends Controller
                 ->orWhere('zipcode_entreprise', $request->zipcode_entreprise)
                 ->orWhere('pays_entreprise', $request->pays_entreprise)
                 ->orWhere('adresse_entreprise', $request->adresse_entreprise)->first()->delete();
+
+                echo 'Entreprise supprimée';
+                echo "<script> history.go(-1); </script>";
             break;
         }
     }
