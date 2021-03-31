@@ -14,7 +14,6 @@ class CreateProposer extends Migration
     public function up()
     {
         Schema::create('proposer', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('id_entreprise')->unsigned();
             $table->integer('id_offre_de_stage')->unsigned();
             $table->foreign('id_entreprise')->references('id')->on('entreprise')
@@ -23,6 +22,7 @@ class CreateProposer extends Migration
             $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
+                
         });
     }
 

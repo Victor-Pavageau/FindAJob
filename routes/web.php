@@ -8,8 +8,10 @@ use App\Http\Controllers\DelegueController;
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\UtilisateurController;
 use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +80,6 @@ Route::get('/mesdonnees', function () {
     return view('modifier_Donnees_Personelles');
 })->name("mesdonnees");
 
-Route::get('/identification', function () {
-    return view('login');
-})->name("login");
+Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification");
+Route::get('/inscription', [UtilisateurController::class, 'register'])->name("inscription");
+Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");

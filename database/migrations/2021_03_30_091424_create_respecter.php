@@ -14,7 +14,6 @@ class CreateRespecter extends Migration
     public function up()
     {
         Schema::create('respecter', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_droit')->unsigned();
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
@@ -23,6 +22,7 @@ class CreateRespecter extends Migration
             $table->foreign('id_droit')->references('id')->on('droit')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
+                
         });
     }
 

@@ -15,15 +15,19 @@ class CreateUtilisateur extends Migration
     {
         Schema::create('utilisateur', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username');
-            $table->integer('password');
+            $table->string('password');
             $table->string('Nom');
             $table->string('Prenom');
             $table->integer('Type');
             $table->string('Centre');
-            $table->string('CV');
-            $table->string('Lettre_de_motivation');
+            $table->string('CV')->nullable();
+            $table->string('Lettre_de_motivation')->nullable();
             $table->string('E_mail');
+            $table->timestamps();
+            $table->integer('id_promotion')->unsigned();
+            $table->foreign('id_promotion')->references('id')->on('promotion')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
 
         });
     }

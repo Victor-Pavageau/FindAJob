@@ -14,7 +14,6 @@ class CreatePosseder extends Migration
     public function up()
     {
         Schema::create('posseder', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_competence')->unsigned();
             

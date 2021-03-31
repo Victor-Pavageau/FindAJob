@@ -14,7 +14,6 @@ class CreateViser extends Migration
     public function up()
     {
         Schema::create('viser', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('id_offre_de_stage')->unsigned();
             $table->integer('id_promotion')->unsigned();
             

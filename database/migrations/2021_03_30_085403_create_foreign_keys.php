@@ -13,14 +13,6 @@ class CreateForeignKeys extends Migration
      */
     public function up()
     {
-        Schema::table('appartenir', function (Blueprint $table) {
-            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_promotion')->references('id')->on('promotion')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-        });
 
         Schema::table('candidature', function (Blueprint $table) {
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
@@ -30,8 +22,6 @@ class CreateForeignKeys extends Migration
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
         });
-
-
 
         Schema::table('interesser', function (Blueprint $table) {
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')

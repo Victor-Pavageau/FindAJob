@@ -14,7 +14,6 @@ class CreateFormuler extends Migration
     public function up()
     {
         Schema::create('formuler', function (Blueprint $table) {
-            $table->increments('id');
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_candidature')->unsigned();
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
@@ -23,6 +22,7 @@ class CreateFormuler extends Migration
             $table->foreign('id_candidature')->references('id')->on('candidature')
                 ->onUpdate('restrict')
                 ->onDelete('restrict');
+                
         });
     }
 
