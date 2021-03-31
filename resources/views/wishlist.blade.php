@@ -61,6 +61,8 @@
                         </div>
                     </div>
                     <button value="search"  name="action" type="submit" class="btn blue">Rechercher</button>
+                    <button value="delete"  name="action" type="submit" class="btn yellow">Supprimer</button>
+                    <button type="button" class="btn red" onclick="history.go(-1)"> Retour</button>
                 </form>
                 <br>
             </div>

@@ -80,7 +80,12 @@ class Offre_de_stageController extends Controller
                 break;
 
             case 'delete':
-                dd("ca marche pour le delete");
+                $stage = Offre_de_stage::where('intitule', $request->intitule)
+                ->orWhere('duree_du_stage', $request->duree_du_stage)
+                ->orWhere('base_de_remuneration', $request->base_de_remuneration)
+                ->orWhere('date_du_stage', $request->date_du_stage)
+                ->orWhere('nombre_de_places', $request->nombre_de_places)
+                ->orWhere('id_entreprise', $request->id_entreprise)->first();
                 break;
         }
     }
