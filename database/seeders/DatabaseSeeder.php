@@ -64,6 +64,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Droit::create( [
             'SFx' => '10',   
             ]);
+            
              
     }
 }
