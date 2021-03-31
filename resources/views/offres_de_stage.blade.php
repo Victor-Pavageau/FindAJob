@@ -82,8 +82,13 @@
 							<div class="col">
 								<fieldset>
 									<legend style="background-color: #000; color: #fff;">
-                                        <button class="btn blue float-right">Postuler pour cette Offre</button>
-                                        <button class="btn yellow float-right"><i class="fas fa-star"></i></button>
+                                        <form action="" method="post">
+                                            @csrf
+                                            <button value="postuler" name="action" type="submit" class="btn blue float-right">Postuler pour cette Offre</button>
+                                            <button value="wish" name="action" type="submit" class="btn yellow float-right"><i class="fas fa-star"></i></button>
+                                            <input type="text" class="form-control" name="id_utilisateur_cookie" value="{{ json_decode(Cookie::get('utilisateur'))->Prenom }}">
+                                            <input type="hidden" class="form-control" name="id_offre_de_stage">
+                                        </form>
                                         <label class="d-flex justify-content-center">{{ $offre_de_stage->intitule}}</label>
                                     </legend>
 									<label> - Durée du stage : {{ $offre_de_stage->duree_du_stage}} </label><br>
