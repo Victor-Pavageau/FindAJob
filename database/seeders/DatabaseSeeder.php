@@ -65,6 +65,10 @@ class DatabaseSeeder extends Seeder
             'SFx' => '10',   
             ]);
             
+        /*\App\Models\Note::create( [
+            'score' => '10',
+            'id_entreprise' => '1',
+            ]);*/
              
     }
 }
