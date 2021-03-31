@@ -9,4 +9,5 @@ class Wishlist extends Model
 {
     use HasFactory;
     protected $table = "wishlist";
+    protected $fillable = ['id_offre_de_stage','id_utilisateur_cookie'];
 }
