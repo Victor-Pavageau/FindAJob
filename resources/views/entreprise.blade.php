@@ -79,8 +79,11 @@
 									<input type="text" class="form-control" value="0" name="nombre_stagiaire_entreprise">
 								</div>
 							</div>
-							<div>
-								<button value="delete" name="action" type="submit" class="btn purple">Supprimer l'entreprise</button>
+							<div class="col">
+								<button value="delete" name="action" type="submit" class="btn red">Supprimer l'entreprise</button>
+							</div>
+							<div class="col">
+								<button value="search" name="action" type="submit" class="btn purple">Rechercher l'entreprise</button>
 							</div>
 						</div>
 					</form>

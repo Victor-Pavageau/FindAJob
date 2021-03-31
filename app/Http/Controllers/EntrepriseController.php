@@ -36,22 +36,22 @@ class EntrepriseController extends Controller
      */
     public function store(Request $request)
     {
+        $infos_entreprise = [
+            $nom_entreprise = request('nom_entreprise'),
+            $domaine_entreprise = request('domaine_entreprise'),
+            $mail_entreprise = request('mail_entreprise'),
+            $nombre_stagiaire_entreprise = request('nombre_stagiaire_entreprise'),
+            $confiance_entreprise = request('confiance_entreprise'),
+            $zipcode_entreprise = request('zipcode_entreprise'),
+            $pays_entreprise = request('pays_entreprise'),
+            $adresse_entreprise = request('adresse_entreprise'),
+        ];
+            
         switch ($request->input('action')) {
             
             case 'add':
 
-                $infos_entreprise = [
-                    $nom_entreprise = request('nom_entreprise'),
-                    $domaine_entreprise = request('domaine_entreprise'),
-                    $mail_entreprise = request('mail_entreprise'),
-                    $nombre_stagiaire_entreprise = request('nombre_stagiaire_entreprise'),
-                    $confiance_entreprise = request('confiance_entreprise'),
-                    $zipcode_entreprise = request('zipcode_entreprise'),
-                    $pays_entreprise = request('pays_entreprise'),
-                    $adresse_entreprise = request('adresse_entreprise'),
-                    
-                    Entreprise::create($request->all())
-                ];
+                Entreprise::create($request->all());
 
                 echo 'Entreprise ajoutée';
                 echo "<script> history.go(-1); </script>";
@@ -65,9 +65,20 @@ class EntrepriseController extends Controller
                 dd("ca marche pour le note");
                 break;
 
+            case 'search':
+                $entreprise = Entreprise::where('nom_entreprise', $nom_entreprise)
+                ->orWhere('domaine_entreprise', $domaine_entreprise)
+                ->orWhere('mail_entreprise', $mail_entreprise)
+                ->orWhere('nombre_stagiaire_entreprise', $nombre_stagiaire_entreprise)
+                ->orWhere('confiance_entreprise', $confiance_entreprise)
+                ->orWhere('zipcode_entreprise', $zipcode_entreprise)
+                ->orWhere('pays_entreprise', $pays_entreprise)
+                ->orWhere('adresse_entreprise', $adresse_entreprise)->get();
+            break;
+
             case 'delete':
-                dd("ca marche pour le delete");
-                break;
+            dd("ca marche pour le delete");
+            break;
         }
     }
 

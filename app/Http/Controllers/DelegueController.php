@@ -35,10 +35,20 @@ class DelegueController extends Controller
      */
     public function store(Request $request)
     {
+        $infos_delegue = [
+            $Nom = request('Nom'),
+            $Prenom = request('Prenom'),
+            $Centre = request('Centre'),
+            $E_mail = request('E_mail')
+        ];
+
         switch ($request->input('action')) {
             
             case 'search':
-                dd("ca marche pour le search");
+                $delegues = Utilisateur::where('Nom', $Nom)
+                ->orWhere('Prenom', $Prenom)
+                ->orWhere('Centre', $Centre)
+                ->orWhere('E_mail', $E_mail)->get();
                 break;
     
             case 'update':

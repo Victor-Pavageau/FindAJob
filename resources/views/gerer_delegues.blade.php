@@ -27,28 +27,28 @@
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Nom</span>
-                                    <input type="text" class="form-control" placeholder="Nom du délégué" name="nom_delegue">
+                                    <input type="text" class="form-control" placeholder="Nom du délégué" name="Nom">
                                 </div>
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Prénom</span>
-                                    <input type="text" class="form-control" placeholder="Prénom du délégué" name="prenom_delegue">
+                                    <input type="text" class="form-control" placeholder="Prénom du délégué" name="Prenom">
                                 </div>
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Centre</span>
-                                    <input type="text" class="form-control" placeholder="Centre du délégué" name="centre_delegue">
+                                    <input type="text" class="form-control" placeholder="Centre du délégué" name="Centre">
                                 </div>
                             </div>
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Adresse Mail</span>
-                                    <input type="text" class="form-control" placeholder="Mail du délégué" name="mail_delegue">
+                                    <input type="text" class="form-control" placeholder="Mail du délégué" name="E_mail">
                                 </div>
                             </div>
                         </div>

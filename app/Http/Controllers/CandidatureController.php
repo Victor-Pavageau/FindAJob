@@ -36,14 +36,17 @@ class CandidatureController extends Controller
      */
     public function store(Request $request)
     {
+        $infos_candidature = [
+            $fiche_validation_candidature = request('fiche_validation_candidature'),
+            $convention_candidature = request('convention_candidature')
+        ];
+        
         switch ($request->input('action')) {
             
             case 'add':
-                $infos_candidature = [
-                    $fiche_validation_candidature = request('fiche_validation_candidature'),
-                    $convention_candidature = request('convention_candidature'),
-                    Candidature::create($request->all())
-                ];
+
+                Candidature::create($request->all());
+                
                 echo 'Candidature ajoutée';
                 echo "<script> history.go(-1); </script>";
                 break;
