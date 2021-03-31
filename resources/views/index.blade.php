@@ -6,19 +6,8 @@
     </head>
 
     <body>
-
         <header>
-            <nav class="navbar navbar-light" style="background-color: #fff;">
-                <a class="navbar-brand" href="{{route('home')}}">
-                    <img src="{{ asset('logo.png') }}" width="50" height="50" class="d-inline-block align-middle" alt="">
-                    <p class="d-inline-block align-bottom" alt="">Annuaire d'entreprises</p>
-                </a>
-                <form class="form-inline">
-                    <button class="btn btn-outline-success mr-sm-4" class="btn btn-dark" type="submit">Se connecter</button>
-                    <button class="btn btn-outline-success my-2 my-sm-0" class="btn btn-success" type="submit">S'inscrire</button>
-                </form>
-
-            </nav>
+            @include('Partials/HeaderPartial')
         </header>
 
         <main>
@@ -30,10 +19,7 @@
                         <div class="card-header">Entreprise</div>
                         <div class="card-body">
                             <h5 class="card-title border rounded"><a class= "text-white" href="{{route('entreprise')}}">Gerer les entreprises.</a></h5>
-                            <p class="card-text">Rechercher, Créer, Modifier Evaluer et consulter les statistiques de l'entreprise.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted text-white">Last updated 3 mins ago</small>
+                            <p class="card-text" style="color:black">Rechercher, Créer, Modifier Evaluer et consulter les entreprises.</p>
                         </div>
                     </div>
                     <!-------------------------------Stage-------------------------->
@@ -41,10 +27,7 @@
                         <div class="card-header">Stage</div>
                         <div class="card-body">
                             <h5 class="card-title border rounded"><a class= "text-white" href="{{route('offres_de_stage')}}">Gerer les stages.</a></h5>
-                            <p class="card-text">Rechercher une offre, Créer, Modifier, Supprimer et Consulter les statistiques des offres.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted text-white">Last updated 3 mins ago</small>
+                            <p class="card-text" style="color:black">Rechercher, Créer, Modifier, Supprimer et Consulter les offres.</p>
                         </div>
                     </div>
                     <!-------------------------------Candidature-------------------------->
@@ -52,10 +35,7 @@
                         <div class="card-header">Candidature</div>
                         <div class="card-body">
                             <h5 class="card-title border rounded"><a class= "text-white" href="{{route('mescandidatures')}}">Examiner ses candidatures.</a></h5>
-                            <p class="card-text">Ajouter/Retirer une offre de la wish-list et postuler à une nouvelle offre.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted text-white">Last updated 3 mins ago</small>
+                            <p class="card-text" style="color:black">Gérer ma wishlist et mes candidatures.</p>
                         </div>
                     </div>
                     <!-------------------------------Profil-------------------------->
@@ -63,10 +43,7 @@
                         <div class="card-header">Profil</div>
                         <div class="card-body">
                             <h5 class="card-title border rounded"><a class= "text-white" href="{{route('mesdonnees')}}">Editer votre profil.</a></h5>
-                            <p class="card-text">Modifier les données de l'utilisateur.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted text-white" >Last updated 3 mins ago</small>
+                            <p class="card-text" style="color:black">Modifier les données de l'utilisateur.</p>
                         </div>
                     </div>
                 </div>

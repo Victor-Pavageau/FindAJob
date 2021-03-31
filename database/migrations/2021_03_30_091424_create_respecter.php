@@ -22,7 +22,7 @@ class CreateRespecter extends Migration
             $table->foreign('id_droit')->references('id')->on('droit')
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
-                
+                $table->timestamps();
         });
     }
 

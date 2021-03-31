@@ -16,7 +16,7 @@ class CreateDroit extends Migration
         Schema::create('droit', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('SFx');
-            
+            $table->timestamps();
         });
     }
 

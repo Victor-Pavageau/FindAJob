@@ -21,6 +21,7 @@ class CreateCandidature extends Migration
             $table->integer('Statut');
             $table->integer('id_offre_de_stage')->unsigned();
             $table->integer('id_utilisateur')->unsigned();
+            $table->timestamps();
             
         });
     }

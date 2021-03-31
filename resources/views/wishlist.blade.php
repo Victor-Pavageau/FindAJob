@@ -8,15 +8,7 @@
     
     <body>
         <header>
-            <nav class="navbar navbar-light" style="background-color: #fff;">
-                <a class="navbar-brand" href="{{route('home')}}">
-                    <img src="{{ asset('logo.png') }}" width="50" height="50" class="logo" alt="">
-                    <p class="titre" alt="">Annuaire d'entreprises</p>
-                </a>
-                
-                <div class="bienvenue">Bienvenue + nom du mec</div>
-
-            </nav>
+            @include('Partials/HeaderPartial')
         </header>
 
         <main>
@@ -25,29 +17,28 @@
             </div>
             <div id="bloc1">
                 <h2>Rechercher une offre :</h2>
-                <div>
-                    
-                    <form class="Recherche" method="POST">
+                    <form action="" method="post">
+                        @csrf
                         <div>
-                            <select class="niveau">
-                                <option value="">--Choisissez votre niveau--</option>
+                            <select class="niveau" name="niveau">
+                                <option>--Choisissez votre niveau--</option>
                                 <option id="N1">A2</option>
                                 <option id="N2">A3</option>
                                 <option id="N3">A4</option>
                                 <option id="N4">A5</option>
                             </select>
-                            <select class="niveau">
-                                <option value="">--Choisissez votre domaine--</option>
+                            <select class="niveau" name="domaine">
+                                <option>--Choisissez votre domaine--</option>
                                 <option id="D1">Systèmes/Réseaux</option>
                                 <option id="D2">Développement web</option>
                                 <option id="D3">Gestion de données</option>
                                 <option id="D4">Développement logiciel</option>
                                 <option id="D5">Systèmes embarqués</option>
                             </select>
-                            <input type="submit">
+                            <button value="search"  name="action" type="submit" class="btn blue">Rechercher</button>
                         </div>
                     </form>
-                </div>
+                    <br>
                 <div class="offre">
                 </div>
             </div>

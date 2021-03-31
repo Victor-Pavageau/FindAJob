@@ -16,6 +16,7 @@ class CreateViser extends Migration
         Schema::create('viser', function (Blueprint $table) {
             $table->integer('id_offre_de_stage')->unsigned();
             $table->integer('id_promotion')->unsigned();
+            $table->timestamps();
             
         });
     }

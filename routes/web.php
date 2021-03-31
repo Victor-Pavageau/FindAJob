@@ -5,10 +5,14 @@ use App\Http\Controllers\EntrepriseController;
 use App\Http\Controllers\PiloteController;
 use App\Http\Controllers\CandidatureController;
 use App\Http\Controllers\DelegueController;
-use App\Http\Controllers\StageController;
+use App\Http\Controllers\Offre_de_stageController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WishlistController;
+<<<<<<< HEAD
 use App\Http\Controllers\UtilisateurController;
+=======
+use App\Models\Offre_de_stage;
+>>>>>>> e35248d14f149a5e05176aec29bfae295f26f2c0
 use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
 
@@ -28,7 +32,7 @@ Route::post('entreprise', [EntrepriseController::class, "store"]);
 Route::post('comptes_pilotes', [PiloteController::class, "store"]);
 Route::post('mescandidatures', [CandidatureController::class, "store"]);
 Route::post('gerer_delegues', [DelegueController::class, "store"]);
-Route::post('offres_de_stage', [StageController::class, "store"]);
+Route::post('offres_de_stage', [Offre_de_stageController::class, "store"]);
 Route::post('mesdonnees', [ProfileController::class, "store"]);
 Route::post('wishlist', [WishlistController::class, "store"]);
 

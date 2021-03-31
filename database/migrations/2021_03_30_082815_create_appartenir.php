@@ -17,6 +17,7 @@ class CreateAppartenir extends Migration
             $table->increments('id');
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_promotion')->unsigned();
+            $table->timestamps();
             
         });
     }

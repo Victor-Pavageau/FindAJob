@@ -16,6 +16,7 @@ class CreatePosseder extends Migration
         Schema::create('posseder', function (Blueprint $table) {
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_competence')->unsigned();
+            $table->timestamps();
             
         });
     }

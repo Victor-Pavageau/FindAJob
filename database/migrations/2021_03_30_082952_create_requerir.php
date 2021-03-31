@@ -16,7 +16,7 @@ class CreateRequerir extends Migration
         Schema::create('requerir', function (Blueprint $table) {
             $table->integer('id_competence')->unsigned();
             $table->integer('id_offre_de_stage')->unsigned();
-            
+            $table->timestamps();
         });
     }
 

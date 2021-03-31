@@ -16,6 +16,7 @@ class CreateInteresser extends Migration
         Schema::create('interesser', function (Blueprint $table) {
             $table->integer('id_utilisateur')->unsigned();
             $table->integer('id_offre_de_stage')->unsigned();
+            $table->timestamps();
             
         });
     }

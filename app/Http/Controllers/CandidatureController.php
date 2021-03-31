@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candidature;
 use App\Models\cr;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,8 @@ class CandidatureController extends Controller
             case 'add':
                 $infos_candidature = [
                     $fiche_validation_candidature = request('fiche_validation_candidature'),
-                    $convention_candidature = request('convention_candidature')
+                    $convention_candidature = request('convention_candidature'),
+                    Candidature::create($request->all())
                 ];
                 echo 'Candidature ajoutée';
                 echo "<script> history.go(-1); </script>";

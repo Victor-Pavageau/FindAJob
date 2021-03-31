@@ -35,7 +35,14 @@ class WishlistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        switch ($request->input('action')) {
+            
+            case 'search':
+                dd("ca marche pour le search");
+                break;
+
+        }
+        
     }
 
     /**

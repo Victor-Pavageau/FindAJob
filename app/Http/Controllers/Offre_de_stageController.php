@@ -6,7 +6,7 @@ use App\Models\cr;
 use App\Models\Offre_de_stage;
 use Illuminate\Http\Request;
 
-class StageController extends Controller
+class Offre_de_stageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,12 @@ class StageController extends Controller
             case 'add':
 
                 $infos_stage = [
-                    $duree_stage = request('duree_stage'),
-                    $salaire_stage = request('salaire_stage'),
-                    $date_stage = request('date_stage'),
-                    $places_stage = request('places_stage'),
+                    $intitule = request('intitule'),
+                    $duree_du_stage = request('duree_du_stage'),
+                    $base_de_remuneration = request('base_de_remuneration'),
+                    $date_du_stage = request('date_du_stage'),
+                    $nombre_de_places = request('nombre_de_places'),
+                    $id_entreprise = request('id_entreprise'),
                     Offre_de_stage::create($request->all())
                 ];
 
