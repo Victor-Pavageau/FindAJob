@@ -85,7 +85,7 @@ class Offre_de_stageController extends Controller
                 ->orWhere('base_de_remuneration', $request->base_de_remuneration)
                 ->orWhere('date_du_stage', $request->date_du_stage)
                 ->orWhere('nombre_de_places', $request->nombre_de_places)
-                ->orWhere('id_entreprise', $request->id_entreprise)->first();
+                ->orWhere('id_entreprise', $request->id_entreprise)->first()->delete();
                 break;
         }
     }

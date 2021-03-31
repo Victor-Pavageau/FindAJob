@@ -95,7 +95,7 @@ class EntrepriseController extends Controller
                 ->orWhere('confiance_entreprise', $request->confiance_entreprise)
                 ->orWhere('zipcode_entreprise', $request->zipcode_entreprise)
                 ->orWhere('pays_entreprise', $request->pays_entreprise)
-                ->orWhere('adresse_entreprise', $request->adresse_entreprise)->first();
+                ->orWhere('adresse_entreprise', $request->adresse_entreprise)->first()->delete();
             break;
         }
     }
