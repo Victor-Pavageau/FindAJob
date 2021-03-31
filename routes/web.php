@@ -42,7 +42,7 @@ Route::get('/legal', function () {
 
 Route::get('/inscription', function () {
     return view('inscription');
-})->name("inscription")->middleware('checkIdentifier');
+})->name("inscription")->middleware('dejaIdentifier');;
 
 Route::get('/mescandidatures', function () {
     return view('mescandidatures');
@@ -81,7 +81,6 @@ Route::get('/mesdonnees', function () {
 })->name("mesdonnees")->middleware('checkIdentifier');
 
 Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification")->middleware('dejaIdentifier');
-Route::get('/inscription', [UtilisateurController::class, 'register'])->name("inscription")->middleware('dejaIdentifier');
-Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");//sans vue
-Route::post('/verification',[UtilisateurController::class, 'check'])->name("verifUtilisateur");//sans vue
-Route::post('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur");//sans vue
+Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur")->middleware('checkIdentifier');//sans vue
+Route::post('/verification',[UtilisateurController::class, 'check'])->name("verifUtilisateur")->middleware('checkIdentifier');//sans vue
+Route::post('/deconnexion',[UtilisateurController::class, 'logout'])->name("deconnecteUtilisateur")->middleware('checkIdentifier');//sans vue

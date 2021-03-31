@@ -18,7 +18,7 @@ class DejaIdentifier
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Cookie::get('utilisateur') && url('identifier') == $request->url() || url('inscription') == $request->url() ){
+        if(Cookie::get('utilisateur') && (url('identification') == $request->url() || url('inscription') == $request->url()) ){
             return back();
         }
         return $next($request);
