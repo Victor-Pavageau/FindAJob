@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\cr;
 use App\Models\Entreprise;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class EntrepriseController extends Controller
 {
@@ -51,7 +52,27 @@ class EntrepriseController extends Controller
             
             case 'add':
 
-                Entreprise::create($request->all());
+                $request->validate([
+                    'nom_entreprise'=> 'required',
+                    'domaine_entreprise'=> 'required',
+                    'mail_entreprise'=> 'required',
+                    'nombre_stagiaire_entreprise'=> 'required',
+                    'confiance_entreprise'=> 'required',
+                    'zipcode_entreprise'=> 'required',
+                    'pays_entreprise'=> 'required',
+                    'adresse_entreprise'=> 'required',
+        
+                ]);
+                $entreprise = new Entreprise;
+                $entreprise->nom_entreprise=$request->nom_entreprise;
+                $entreprise->domaine_entreprise=$request->domaine_entreprise;
+                $entreprise->mail_entreprise=$request->mail_entreprise;
+                $entreprise->nombre_stagiaire_entreprise=$request->nombre_stagiaire_entreprise;
+                $entreprise->confiance_entreprise=$request->confiance_entreprise;
+                $entreprise->zipcode_entreprise=$request->zipcode_entreprise;
+                $entreprise->pays_entreprise=$request->pays_entreprise;
+                $entreprise->adresse_entreprise=$request->adresse_entreprise;
+                $query=$entreprise->save();
 
                 echo 'Entreprise ajoutée';
                 echo "<script> history.go(-1); </script>";
