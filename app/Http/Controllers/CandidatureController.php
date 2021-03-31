@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Candidature;
 use App\Models\cr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CandidatureController extends Controller
 {
@@ -25,7 +26,7 @@ class CandidatureController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -36,16 +37,27 @@ class CandidatureController extends Controller
      */
     public function store(Request $request)
     {
-        $infos_candidature = [
-            $fiche_validation_candidature = request('fiche_validation_candidature'),
-            $convention_candidature = request('convention_candidature')
-        ];
+        
         
         switch ($request->input('action')) {
             
             case 'add':
-
-                Candidature::create($request->all());
+                
+                $request->validate([
+            
+                    'Nom'=> 'required',
+                    'intitule'=> 'required'
+        
+                ]);
+                $candidature = new Candidature;
+                $candidature->Date = date('Y-m-d H:i:s');
+                $candidature->Statut = 0;
+                $candidature->id_offre_de_stage = DB::table('offre_de_stage')->where('intitule', $request->Offre_de_stage)->value('id');
+                $candidature->id_utilisateur = DB::table('utilisateur')->where('Nom', $request->Utilisateur)->value('id');
+                $query = $candidature->save();
+        
+                
+                
                 
                 echo 'Candidature ajoutée';
                 echo "<script> history.go(-1); </script>";

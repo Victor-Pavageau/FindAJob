@@ -16,8 +16,8 @@ class CreateCandidature extends Migration
         Schema::create('candidature', function (Blueprint $table) {
             $table->increments('id');
             $table->date('Date');
-            $table->string('Fiche_de_validation');
-            $table->string('Convention');
+            $table->string('Fiche_de_validation')->nullable();
+            $table->string('Convention')->nullable();
             $table->integer('Statut');
             $table->integer('id_offre_de_stage')->unsigned();
             $table->integer('id_utilisateur')->unsigned();

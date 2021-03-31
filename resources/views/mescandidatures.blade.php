@@ -30,6 +30,20 @@
                                     <label class="input-group-text" >Convention</label>
                                     <input type="file" accept=".doc, .docx, .pdf, .png, .jpeg" name="convention_candidature">
                             </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Intitulé de l'offre</span>
+                                    <input type="text" class="form-control" placeholder="" name="intitule">
+                                </div>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Nom de l'utilisateur</span>
+                                    <input type="text" class="form-control" placeholder="" name="Nom">
+                                </div>
+                            </div>
                         </div>
                     </form>
                         
