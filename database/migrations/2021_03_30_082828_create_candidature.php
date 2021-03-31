@@ -11,8 +11,7 @@ class CreateCandidature extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('candidature', function (Blueprint $table) {
             $table->increments('id');
             $table->date('Date');
@@ -21,8 +20,13 @@ class CreateCandidature extends Migration
             $table->integer('Statut');
             $table->integer('id_offre_de_stage')->unsigned();
             $table->integer('id_utilisateur')->unsigned();
+            $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
+            $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')
+                ->onDelete('restrict')
+                ->onUpdate('restrict');
             $table->timestamps();
-            
         });
     }
 
