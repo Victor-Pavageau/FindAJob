@@ -98,3 +98,7 @@ Route::get('/email', function () {
     return new WelcomeMail();
 });
 
+Route::get('/offline', function () {    
+    return view('modules/laravelpwa/offline');
+    });
+
