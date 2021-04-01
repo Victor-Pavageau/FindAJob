@@ -67,12 +67,8 @@ class Offre_de_stageController extends Controller
             
             case 'search':
 
-                $stage = Offre_de_stage::where('intitule', $request->intitule)
-                ->orWhere('duree_du_stage', $request->duree_du_stage)
-                ->orWhere('base_de_remuneration', $request->base_de_remuneration)
-                ->orWhere('date_du_stage', $request->date_du_stage)
-                ->orWhere('nombre_de_places', $request->nombre_de_places)
-                ->orWhere('id_entreprise', $request->id_entreprise)->get();
+                dd($stage = Offre_de_stage::where('intitule', $request->intitule)->get());
+
                 break;
     
             case 'update':
@@ -80,12 +76,7 @@ class Offre_de_stageController extends Controller
                 break;
 
             case 'delete':
-                $stage = Offre_de_stage::where('intitule', $request->intitule)
-                ->orWhere('duree_du_stage', $request->duree_du_stage)
-                ->orWhere('base_de_remuneration', $request->base_de_remuneration)
-                ->orWhere('date_du_stage', $request->date_du_stage)
-                ->orWhere('nombre_de_places', $request->nombre_de_places)
-                ->orWhere('id_entreprise', $request->id_entreprise)->first()->delete();
+                $stage = Offre_de_stage::where('intitule', $request->intitule)->first()->delete();
 
                 echo 'Offre de stage supprimée';
                 echo "<script> history.go(-1); </script>";
