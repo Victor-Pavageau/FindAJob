@@ -89,6 +89,10 @@ Route::get('/mesdonnees', function () {
     return view('modifier_Donnees_Personelles');
 })->name("mesdonnees")->middleware('checkIdentifier');
 
+Route::get('/utilisateurs', function () {
+    return view('utilisateurs');
+})->name("utilisateurs")->middleware('checkIdentifier');
+
 Route::get('/email', function () {
     Mail::to('guillaume.rouvin@viacesi.fr')->send(new WelcomeMail());
     return new WelcomeMail();

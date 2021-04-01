@@ -6,3 +6,4 @@
 <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('logo.png') }}">
 <link rel="stylesheet" href="{{asset('css/header.css')}}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
