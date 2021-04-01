@@ -6,3 +6,5 @@
 <link rel="stylesheet" href="{{ asset('css/buttons.css') }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('logo.png') }}">
 <link rel="stylesheet" href="{{asset('css/header.css')}}">
+<link rel="manifest" href="{{ asset('manifest.json') }}">
+<script src="{{ asset('ServiceWorker.js') }}"></script>
