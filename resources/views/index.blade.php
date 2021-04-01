@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fr">
     <head>
+        @laravelPWA
         @include('Partials/HeadPartial')
         <title>Accueil</title>
     </head>

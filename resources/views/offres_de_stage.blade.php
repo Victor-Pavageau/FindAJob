@@ -77,11 +77,11 @@
 
                 <div class="col-8">
                     <h2>Consulter les offres de stage :</h2>
-                    <div style="overflow:auto; border:#000000 1px solid; min-height: 100px; max-height: 350px; height: auto;">
-						@foreach (DB::table('offre_de_stage')->get() as $offre_de_stage) 
-							<div class="col">
-								<fieldset>
-									<legend style="background-color: #000; color: #fff;">
+                    <div id="foreachacacher" style="overflow:auto; border:#000000 1px solid; min-height: 100px; max-height: 350px; height: auto;">
+                        @foreach (DB::table('offre_de_stage')->get() as $offre_de_stage) 
+                            <div class="col">
+                                <fieldset>
+                                    <legend style="background-color: #000; color: #fff;">
                                         <form action="" method="post">
                                             @csrf
                                             <button value="postuler" name="action" type="submit" class="btn blue float-right">Postuler pour cette Offre</button>
@@ -91,13 +91,13 @@
                                         </form>
                                         <label class="d-flex justify-content-center">{{ $offre_de_stage->intitule}}</label>
                                     </legend>
-									<label> - Durée du stage : {{ $offre_de_stage->duree_du_stage}} </label><br>
-									<label> - Salaire : {{ $offre_de_stage->base_de_remuneration}}€/mois</label><br>
+                                    <label> - Durée du stage : {{ $offre_de_stage->duree_du_stage}} </label><br>
+                                    <label> - Salaire : {{ $offre_de_stage->base_de_remuneration}}€/mois</label><br>
                                     <label> - Début du stage le : {{ $offre_de_stage->date_du_stage}}</label><br>
                                     <label> - Ce stage propose : {{ $offre_de_stage->nombre_de_places}} places</label><br>
-								</fieldset> <br><br>
-							</div>
-						@endforeach
+                                </fieldset> <br><br>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
