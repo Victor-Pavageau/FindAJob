@@ -33,7 +33,7 @@ Route::post('mescandidatures', [CandidatureController::class, "store"])->middlew
 Route::post('gerer_delegues', [DelegueController::class, "store"])->middleware('checkIdentifier');
 Route::post('offres_de_stage', [Offre_de_stageController::class, "store"])->middleware('checkIdentifier');
 Route::post('mesdonnees', [ProfileController::class, "store"])->middleware('checkIdentifier');
-Route::post('wishlist', [WishlistController::class, "store"])->middleware('checkIdentifier');
+Route::post('offres_de_stage', [WishlistController::class, "store"])->middleware('checkIdentifier');
 
 Route::get('/identification', [UtilisateurController::class, 'login'])->name("identification")->middleware('dejaIdentifier');
 Route::post('/creationUtilisateur',[UtilisateurController::class, 'create'])->name("creeUtilisateur");//sans vue

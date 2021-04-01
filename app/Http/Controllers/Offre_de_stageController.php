@@ -42,7 +42,7 @@ class Offre_de_stageController extends Controller
         $offre_de_stage->intitule=$request->intitule;
         $offre_de_stage->duree_du_stage=$request->duree_du_stage;
         $offre_de_stage->base_de_remuneration=$request->base_de_remuneration;
-        $offre_de_stage->date_du_stage=$request->date_du_stage;
+        $offre_de_stage->date_du_stage=$request->date_du_stage=date("Y-m-d");
         $offre_de_stage->nombre_de_places=$request->nombre_de_places;
         $offre_de_stage->id_entreprise = DB::table('entreprise')->where('nom_entreprise', $request->nom_entreprise)->value("id");
         

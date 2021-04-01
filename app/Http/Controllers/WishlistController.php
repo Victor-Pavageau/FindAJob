@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\cr;
-use App\Models\Offre_de_stage;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -39,22 +38,27 @@ class WishlistController extends Controller
     public function store(Request $request)
     {
 
-        $wishlist = new Wishlist();
-        $wishlist->id_offre_de_stage = DB::table('offre_de_stage')->where('intitule', $request->intitule)->value('id');
-        $wishlist->id_utilisateur = DB::table('utilisateur')->where('Nom', $request->Nom)->value('id');
+        $wishlist = new Wishlist;
+        $wishlist->id_utilisateur_cookie=$request->id_utilisateur_cookie;
+        $wishlist->id_offre_de_stage=$request->id_offre_de_stage;
+        
         
         switch ($request->input('action')) {
             
             case 'postuler':
-
-                
+                dd('Ca marche pour postuler');
                 break;
 
             case 'wish':
 
+                $request->validate([
+                    'id_utilisateur_cookie'=> 'required',
+                    'id_offre_de_stage'=> 'required',
+                ]);
                 
+                $query=$wishlist->save();
 
-                echo 'Offre de stage supprimée';
+                echo 'Offre de stage ajoutée à la wishlist';
                 echo "<script> history.go(-1); </script>";
                 break;
         }
