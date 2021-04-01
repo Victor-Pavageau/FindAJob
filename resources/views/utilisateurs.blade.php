@@ -82,7 +82,7 @@
                     <h2>Consulter les entreprises.</h2>
                     <div style="overflow:auto; border:#000000 1px solid; min-height: 100px; max-height: 350px; height: auto;">
 						@foreach (DB::table('utilisateur')->get() as $utilisateur) 
-							<div id="{{ $utilisateur->id }}"class="col">
+							<div class="col">
 								<fieldset>
 									<legend class="d-flex justify-content-center" style="background-color: #000; color: #fff;">{{ $utilisateur->Nom}} {{$utilisateur->Prenom}}</legend>
 									@if ( json_decode(Cookie::get('utilisateur'))->Type == 4)
@@ -93,7 +93,7 @@
 									<label id="Lettre_de_motivation_Affichage"> - Lettre de motivation : {{ $utilisateur->Lettre_de_motivation }},</label>
 									<label id="E_Mail_Affichage"> - E-mail : {{ $utilisateur->E_mail }} </label><br>
                                     <label id="Promotion_Affichage"> - Promotion : {{ DB::table('promotion')->where('id', $utilisateur->id_promotion)->value('Nom') }} </label><br>
-                                    <button name="Selectionner" class="btn blue" value="button">Selectionner</button>
+                                    <button id="{{ $utilisateur->id }}" class="btn blue Selectionner" value="button" onclick="Selectionner(this)">Selectionner</button>
 								</fieldset> <br><br>
 							</div>
 						@endforeach
@@ -103,11 +103,9 @@
         </div>
         @include('Partials/LegalPartial')
         <script>
-        $(document).ready(function(){
-            $("#Selectionner").click(function(){
-                alert($(this).closest('div').attr('id'));
-            });
-        });
+        function Selectionner(elem) {
+			console.log(elem.parentElement);
+		}
         </script>
     </body>
 </html>
