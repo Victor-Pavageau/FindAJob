@@ -1,7 +1,7 @@
 {
     "name": "Trouve 1 stage",
     "short_name": "T1S",
-    "start_url": "../index.php",
+    "start_url": "./resources/views/index.blade.php",
     "display": "standalone",
     "background-color": "#FFFF",
     "theme_color" : "#03a9f4",

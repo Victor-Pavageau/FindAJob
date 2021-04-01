@@ -3,7 +3,9 @@ const NomDuCache= 'ma_sauvegarde';
 const assets = [
     '/',
     '/index.php',
-    '../ressources/views/index.blade.php',
+    './ressources/views/index.blade.php',
+    './resources/views/entreprise.blade.php',
+    './ressources/views/login.blade.php',
     'manifest.json',
     './css/buttons.css',
     'logo.png'
