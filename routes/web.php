@@ -31,7 +31,7 @@ Route::post('entreprise', [EntrepriseController::class, "store"])->middleware('c
 Route::post('comptes_pilotes', [PiloteController::class, "store"])->middleware('checkIdentifier');
 Route::post('mescandidatures', [CandidatureController::class, "store"])->middleware('checkIdentifier');
 Route::post('gerer_delegues', [DelegueController::class, "store"])->middleware('checkIdentifier');
-// Route::post('offres_de_stage', [Offre_de_stageController::class, "store"])->middleware('checkIdentifier');
+Route::post('offres_de_stage', [Offre_de_stageController::class, "store"])->middleware('checkIdentifier');
 Route::post('mesdonnees', [ProfileController::class, "store"])->middleware('checkIdentifier');
 Route::post('offres_de_stage', [WishlistController::class, "store"])->middleware('checkIdentifier');
 

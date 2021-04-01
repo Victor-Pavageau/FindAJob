@@ -38,7 +38,6 @@ class WishlistController extends Controller
     public function store(Request $request)
     {
 
-        echo("yo");
         $wishlist = new Wishlist;
         $wishlist->id_utilisateur_cookie=$request->id_utilisateur_cookie;
         $wishlist->id_offre_de_stage=$request->id_offre_de_stage;
@@ -47,8 +46,7 @@ class WishlistController extends Controller
         switch ($request->input('action')) {
             
             case 'postuler':
-                echo 'Vous avez postulé à cette offre de stage';
-                echo "<script> history.go(-1); </script>";
+                dd('Ca marche pour postuler');
                 break;
 
             case 'wish':
