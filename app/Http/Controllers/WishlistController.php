@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\cr;
-use App\Models\Offre_de_stage;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -43,11 +42,11 @@ class WishlistController extends Controller
         $wishlist->id_utilisateur_cookie=$request->id_utilisateur_cookie;
         $wishlist->id_offre_de_stage=$request->id_offre_de_stage;
         
+        
         switch ($request->input('action')) {
             
             case 'postuler':
-                echo 'Vous avez postulé à cette offre de stage';
-                echo "<script> history.go(-1); </script>";
+                dd('Ca marche pour postuler');
                 break;
 
             case 'wish':

@@ -23,14 +23,7 @@ class CreateForeignKeys extends Migration
                 ->onDelete('restrict')
                 ->onUpdate('restrict');
         });
-        Schema::table('wishlist', function (Blueprint $table) {
-            $table->foreign('id_utilisateur_cookie')->references('id')->on('utilisateur')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-            $table->foreign('id_offre_de_stage')->references('id')->on('offre_de_stage')
-                ->onDelete('restrict')
-                ->onUpdate('restrict');
-        });
+        
         Schema::table('respecter', function (Blueprint $table) {
             $table->foreign('id_utilisateur')->references('id')->on('utilisateur')
                 ->onDelete('restrict')
